@@ -1,6 +1,6 @@
-import { Container } from '../components/Container'
 import { Box, Button, ButtonGroup, Flex, Input, InputGroup, Spacer } from "@chakra-ui/react";
 import { SearchIcon } from '@chakra-ui/icons';
+import { DarkModeSwitch } from './DarkModeSwitch'
 import { Titlecard } from './Titlecard';
 
 const searchClick = () => {
@@ -18,6 +18,7 @@ export const Header = () => (
         <Button onClick={searchClick}>{<SearchIcon />}</Button>
       </InputGroup>
       <ButtonGroup gap='2'>
+        <DarkModeSwitch />
         <Button colorScheme='purple'>Register</Button>
         <Button colorScheme='blue'>Login</Button>
         <Button colorScheme='yellow'>Cart</Button>
