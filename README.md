@@ -2,4 +2,4 @@
 
 Frontend for pokemart web app. 
 
-Built with [Nextjs](https://nextjs.org/) and stylized with [chakra-ui](https://github.com/chakra-ui/chakra-ui)
+Built with [Next](https://github.com/vercel/next.js) and stylized with [Chakra](https://github.com/chakra-ui/chakra-ui)
