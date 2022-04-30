@@ -1,5 +1,5 @@
 # pokeweb
 
-Frontend for pokemart web app. 
+Frontend for pokemart, a mock E-commerce web app. 
 
-Built with [Next](https://github.com/vercel/next.js) and stylized with [Chakra](https://github.com/chakra-ui/chakra-ui)
+Built with [Nextjs](https://github.com/vercel/next.js) and stylized with [Chakra-ui](https://github.com/chakra-ui/chakra-ui).
