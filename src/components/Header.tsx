@@ -8,7 +8,14 @@ const searchClick = () => {
 }
 
 export const Header = () => (
-    <Flex direction="row" width='100vw' justifyContent="start" alignItems="center" gap='4'>
+    <Flex 
+      direction="row" 
+      width='100vw' 
+      justifyContent="start" 
+      alignItems="center" 
+      gap='4' 
+      px={{ base: 4 }} 
+    >
     <Spacer />
       <Box p='4'>
         <Titlecard />

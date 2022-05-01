@@ -1,14 +1,18 @@
 import { Container } from '../components/Container'
 import { Footer } from '../components/Footer';
+import Navbar from '../components/Navbar';
 import { Header } from '../components/Header';
+import { Box } from '@chakra-ui/react';
 
 const Listing = () => (
-  <Container height="100vh">
+  <Box>
+    <Container height="100vh">
     <Header />
+    <Navbar />
     <h1>test</h1>
+    </Container>
     <Footer />
-  </Container>
-
+  </Box>
 )
 
 export default Listing;

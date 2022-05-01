@@ -16,7 +16,6 @@ export const Footer = (props: FlexProps) => (
     width='100vw'
     alignItems="center" 
     as="footer" 
-    py="1rem" 
     {...props}
   >
     <Box
@@ -95,10 +94,6 @@ export const Footer = (props: FlexProps) => (
           Built and designed by Anson Lee.
           <br />
           Pokémon and its respective properties are © The pokémon Company International, Inc.
-          <br />
-          <a>Privacy Policy</a>
-          <span> • </span>
-          <a>Terms of Service</a>
         </Text>
       </Box>
     </Box>
