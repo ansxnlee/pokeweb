@@ -37,7 +37,7 @@ export default function Navbar() {
         borderStyle={'solid'}
         borderColor={useColorModeValue('gray.200', 'gray.900')}
         align={'center'}>
-        {/* Flexbox for mobile navigation */}
+        {/* Flexbox for mobile navigation button */}
         <Flex
           flex={{ base: 1, md: 'auto' }}
           ml={{ base: -2 }}
@@ -236,10 +236,35 @@ const NAV_ITEMS: Array<NavItem> = [
         href: '#',
       },
       {
-        label: 'Training Items',
-        subLabel: 'Special items for trainers',
+        label: 'Evolution Items',
+        subLabel: 'Used to evolve certain Pokemon',
         href: '#',
       },
+      {
+        label: 'Fossils',
+        subLabel: 'Pokemon Fossils',
+        href: '#',
+      },
+      {
+        label: 'Loot',
+        subLabel: 'Can be sold for a profit',
+        href: '#',
+      },
+      {
+        label: 'Collectables',
+        subLabel: 'Can be traded with others',
+        href: '#',
+      },
+      {
+        label: 'Mulch',
+        subLabel: 'Pokemon garden supplies',
+        href: '#',
+      },
+    ],
+  },
+  {
+    label: 'Held Items',
+    children: [
       {
         label: 'Held Items',
         subLabel: 'Items designed to be held by pokemon',
@@ -251,28 +276,18 @@ const NAV_ITEMS: Array<NavItem> = [
         href: '#',
       },
       {
+        label: 'Training Items',
+        subLabel: 'Special items for trainers',
+        href: '#',
+      },
+      {
         label: 'Type Enhancement',
         subLabel: 'Pokemon enhancement items',
         href: '#',
       },
       {
-        label: 'Jewels',
-        subLabel: 'Single use move-type boosters',
-        href: '#',
-      },
-      {
-        label: 'Evolution Items',
-        subLabel: 'Used to evolve certain Pokemon',
-        href: '#',
-      },
-      {
         label: 'Mega Stones',
         subLabel: 'Stones that allow certain Pokemon to mega-evolve',
-        href: '#',
-      },
-      {
-        label: 'Fossils',
-        subLabel: 'Pokemon Fossils',
         href: '#',
       },
       {
@@ -293,26 +308,6 @@ const NAV_ITEMS: Array<NavItem> = [
       {
         label: 'Choice Items',
         subLabel: 'Power Move restriction items',
-        href: '#',
-      },
-      {
-        label: 'Scarves',
-        subLabel: 'Contest Items',
-        href: '#',
-      },
-      {
-        label: 'Loot',
-        subLabel: 'Can be sold for a profit',
-        href: '#',
-      },
-      {
-        label: 'Collectables',
-        subLabel: 'Can be traded with others',
-        href: '#',
-      },
-      {
-        label: 'Mulch',
-        subLabel: 'Pokemon garden supplies',
         href: '#',
       },
     ],

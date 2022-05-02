@@ -29,10 +29,10 @@ export const Footer = (props: FlexProps) => (
       <Container as={Stack} maxW={'6xl'} py={10}>
         <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
           <Stack align={'flex-start'}>
-            <ListHeader>Product</ListHeader>
-            <Link href={'#'}>Overview</Link>
+            <ListHeader>Help</ListHeader>
+            <Link href={'#'}>Customer Service</Link>
             <Stack direction={'row'} align={'center'} spacing={2}>
-              <Link href={'#'}>Features</Link>
+              <Link href={'#'}>Help Center</Link>
               <Tag
                 size={'sm'}
                 bg={useColorModeValue('green.300', 'green.800')}
@@ -41,32 +41,32 @@ export const Footer = (props: FlexProps) => (
                 New
               </Tag>
             </Stack>
-            <Link href={'#'}>Tutorials</Link>
-            <Link href={'#'}>Pricing</Link>
-            <Link href={'#'}>Releases</Link>
+            <Link href={'#'}>Accessibility</Link>
+            <Link href={'#'}>Leave Us Feedback</Link>
+            <Link href={'#'}>Refund and Return Policy</Link>
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader>Company</ListHeader>
             <Link href={'#'}>About Us</Link>
-            <Link href={'#'}>Press</Link>
+            <Link href={'#'}>Press Release</Link>
             <Link href={'#'}>Careers</Link>
             <Link href={'#'}>Contact Us</Link>
             <Link href={'#'}>Partners</Link>
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader>Legal</ListHeader>
+            <Link href={'#'}>Conditions of Use</Link>
             <Link href={'#'}>Cookies Policy</Link>
-            <Link href={'#'}>Privacy Policy</Link>
+            <Link href={'#'}>Privacy Notice</Link>
             <Link href={'#'}>Terms of Service</Link>
-            <Link href={'#'}>Law Enforcement</Link>
-            <Link href={'#'}>Status</Link>
+            <Link href={'#'}>Interest-Based Ads</Link>
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader>Follow Us</ListHeader>
-            <Link href={'#'}>Facebook</Link>
+            <Link href={'#'}>Youtube</Link>
             <Link href={'#'}>Twitter</Link>
-            <Link href={'#'}>Dribbble</Link>
             <Link href={'#'}>Instagram</Link>
+            <Link href={'#'}>Facebook</Link>
             <Link href={'#'}>LinkedIn</Link>
           </Stack>
         </SimpleGrid>
