@@ -13,22 +13,20 @@ const ListHeader = ({ children }: { children: ReactNode }) => {
 export const Footer = (props: FlexProps) => (
   <Flex 
     direction="column" 
-    width='100vw'
-    alignItems="center" 
+    alignItems="stretch" 
     as="footer" 
     {...props}
   >
     <Box
       bg={useColorModeValue('gray.50', 'gray.900')}
       color={useColorModeValue('gray.700', 'gray.200')}
-      width='100vw'
       borderTopWidth={1}
       borderStyle={'solid'}
       borderColor={useColorModeValue('gray.200', 'gray.700')}
     >
       <Container as={Stack} maxW={'6xl'} py={10}>
         <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
-          <Stack align={'flex-start'}>
+          <Stack align={'flex-start='}>
             <ListHeader>Help</ListHeader>
             <Link href={'#'}>Customer Service</Link>
             <Stack direction={'row'} align={'center'} spacing={2}>

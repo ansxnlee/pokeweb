@@ -1,4 +1,4 @@
-import { Box, Button, ButtonGroup, Flex, Input, InputGroup, Spacer } from "@chakra-ui/react";
+import { Box, Button, ButtonGroup, Flex, Input, InputGroup } from "@chakra-ui/react";
 import { SearchIcon } from '@chakra-ui/icons';
 import { DarkModeSwitch } from './DarkModeSwitch'
 import { Titlecard } from './Titlecard';
@@ -10,18 +10,16 @@ const searchClick = () => {
 export const Header = () => (
     <Flex 
       direction="row" 
-      width='100vw' 
       justifyContent="start" 
       alignItems="center" 
       gap='4' 
       px={{ base: 4 }} 
     >
-    <Spacer />
       <Box p='4'>
         <Titlecard />
       </Box>
       <InputGroup>
-        <Input variant='filled' placeholder='Search for item..' />
+        <Input variant='filled' placeholder='Search for item..' flexGrow={1} />
         <Button onClick={searchClick}>{<SearchIcon />}</Button>
       </InputGroup>
       <ButtonGroup gap='2'>
@@ -30,6 +28,5 @@ export const Header = () => (
         <Button colorScheme='blue'>Login</Button>
         <Button colorScheme='yellow'>Cart</Button>
       </ButtonGroup>
-      <Spacer />
     </Flex>
 )
