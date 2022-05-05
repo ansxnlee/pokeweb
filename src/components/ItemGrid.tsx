@@ -1,4 +1,4 @@
-import { Box, Flex, Grid, GridItem, Link, Popover, PopoverTrigger, useColorModeValue, } from '@chakra-ui/react'
+import { Box, Flex, Grid, GridItem, Link, Popover, PopoverTrigger, useColorModeValue } from '@chakra-ui/react'
 
 export const ItemGrid = () => (
   <Box>

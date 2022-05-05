@@ -2,10 +2,7 @@ import {
   Box,
   Flex,
   Text,
-  IconButton,
-  Button,
   Stack,
-  Collapse,
   Icon,
   Link,
   Popover,
@@ -13,44 +10,36 @@ import {
   PopoverContent,
   useColorModeValue,
   useBreakpointValue,
-  useDisclosure,
 } from '@chakra-ui/react';
-import {
-  HamburgerIcon,
-  CloseIcon,
-  ChevronDownIcon,
-  ChevronRightIcon,
-} from '@chakra-ui/icons';
+import { ChevronDownIcon, ChevronRightIcon } from '@chakra-ui/icons';
 
-export default function Navbar() {
-  return (
-    <Box>
-      <Flex
-        bg={useColorModeValue('white', 'gray.800')}
-        color={useColorModeValue('gray.600', 'white')}
-        minH={'60px'}
-        py={{ base: 2 }}
-        px={{ base: 4 }}
-        borderBottom={1}
-        borderStyle={'solid'}
-        borderColor={useColorModeValue('gray.200', 'gray.900')}
-        align={'center'}
-      >
-        <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-          <Text
-            textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
-            fontFamily={'heading'}
-            color={useColorModeValue('red', 'yellow')}>
-            Categories
-          </Text>
-          <Flex ml={10}>
-            <NavButtons />
-          </Flex>
+export const Navbar = () => (
+  <Box>
+    <Flex
+      bg={useColorModeValue('white', 'gray.800')}
+      color={useColorModeValue('gray.600', 'white')}
+      minH={'60px'}
+      py={{ base: 2 }}
+      px={{ base: 4 }}
+      borderBottom={1}
+      borderStyle={'solid'}
+      borderColor={useColorModeValue('gray.200', 'gray.900')}
+      align={'center'}
+    >
+      <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
+        <Text
+          textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
+          fontFamily={'heading'}
+          color={useColorModeValue('red', 'yellow')}>
+          Categories
+        </Text>
+        <Flex ml={10}>
+          <NavButtons />
         </Flex>
       </Flex>
-    </Box>
-  );
-}
+    </Flex>
+  </Box>
+)
 
 const NavButtons = () => {
   const linkColor = useColorModeValue('gray.600', 'gray.200');
@@ -144,6 +133,7 @@ interface NavItem {
 const NAV_ITEMS: Array<NavItem> = [
   {
     label: 'Items',
+    href: '/items',
     children: [
       {
         label: 'Trainer Utility',
@@ -179,6 +169,7 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: 'Held Items',
+    href: '/held',
     children: [
       {
         label: 'Held Items',
@@ -229,6 +220,7 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: 'Medicine',
+    href: '/medicine',
     children: [
       {
         label: 'Healing',
@@ -259,6 +251,7 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: 'Poké Balls',
+    href: './pokeballs',
     children: [
       {
         label: 'Standard Balls',
@@ -279,6 +272,7 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: 'TMs',
+    href: './tms',
     children: [
       {
         label: 'TMs 01-19',
@@ -304,6 +298,7 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: 'Berries',
+    href: './berries',
     children: [
       {
         label: 'Medicine',
@@ -344,6 +339,7 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: 'Mail',
+    href: './mail',
     children: [
       {
         label: 'Mail',
@@ -354,6 +350,7 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: 'Battle Items',
+    href: './battle',
     children: [
       {
         label: 'Stat Boosts',

@@ -2,7 +2,7 @@ import { Header } from '../components/Header';
 import { Container } from '../components/Container'
 import { ItemGrid } from '../components/ItemGrid';
 import { Footer } from '../components/Footer';
-import Navbar from '../components/Navbar';
+import { Navbar } from '../components/Navbar';
 import { Box, Flex, Grid, GridItem, Popover, PopoverTrigger, Tab, TabList, TabPanel, TabPanels, Tabs, useColorModeValue } from '@chakra-ui/react';
 
 const Test = () => (
