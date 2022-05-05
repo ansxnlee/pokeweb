@@ -138,32 +138,32 @@ const NAV_ITEMS: Array<NavItem> = [
       {
         label: 'Trainer Utility',
         subLabel: 'Useful items for any trainer',
-        href: '#',
+        href: '/items/trainerUtility',
       },
       {
         label: 'Evolution Items',
         subLabel: 'Used to evolve certain Pokemon',
-        href: '#',
+        href: '/items/evolution',
       },
       {
         label: 'Fossils',
         subLabel: 'Pokemon Fossils',
-        href: '#',
+        href: '/items/fossils',
       },
       {
         label: 'Loot',
         subLabel: 'Can be sold for a profit',
-        href: '#',
+        href: '/items/loot',
       },
       {
         label: 'Collectables',
         subLabel: 'Can be traded with others',
-        href: '#',
+        href: '/items/collectables',
       },
       {
         label: 'Mulch',
         subLabel: 'Pokemon garden supplies',
-        href: '#',
+        href: '/items/mulch',
       },
     ],
   },
