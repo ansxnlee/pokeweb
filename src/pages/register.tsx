@@ -6,12 +6,29 @@ import { MiniHeader } from '../components/MiniHeader';
 import { MiniFooter } from "../components/MiniFooter";
 import { FormikInputField } from "../components/FormikInputField";
 import Link from "next/link";
+import { useMutation } from 'urql';
 
 interface registerProps {
 
 }
 
+const REGISTER_MUT = `
+mutation Mutation($password: String!, $username: String!) {
+  register(password: $password, username: $username) {
+    errors {
+      field
+      message
+    }
+    user {
+      id
+      username
+    }
+  }
+}
+`
+
 const Register: React.FC<registerProps> = ({}) => {
+  const [, register] = useMutation(REGISTER_MUT);
   return (
     <Container height="100vh">
       <MiniHeader />
@@ -19,7 +36,7 @@ const Register: React.FC<registerProps> = ({}) => {
         <Formik
           initialValues={{ username: '', password: '' }}
           onSubmit={(values) => {
-            console.log(values);
+            return register({ username: values.username, password: values.password });
           }}
         >
           {({ isSubmitting }) => (
