@@ -1,6 +1,6 @@
 import React from "react";
 import { Formik, Form } from 'formik';
-import { Box, Flex, Button, Text } from "@chakra-ui/react";
+import { Flex, Button, Text } from "@chakra-ui/react";
 import { Container } from '../components/Container';
 import { MiniHeader } from '../components/MiniHeader';
 import { MiniFooter } from "../components/MiniFooter";
@@ -25,7 +25,7 @@ const Register: React.FC<registerProps> = ({}) => {
           {({ isSubmitting }) => (
             <Form>
               <Flex direction='column' alignItems="center" gap='2'>
-                <Box mb={4} fontWeight='bold' fontSize='large'>Create account</Box>
+                <Text mb={4} fontWeight='bold' fontSize='2xl'>Create account</Text>
                 <FormikInputField 
                   name='username' 
                   placeholder='' 
@@ -48,13 +48,11 @@ const Register: React.FC<registerProps> = ({}) => {
                 <Text pt={4} fontSize={'sm'} textAlign={'center'}>
                   By creating an account, you agree to Pokemart's
                   <br />
-                  {/* chakra's text component renders <p> by default so this mess is a workaround */}
                   <Text as='span' display='inline' color='blue.400' _hover={{ color: 'orange' }}>
                     <Link href='#'>
                       Conditions of Use
                     </Link>
                   </Text>
-                  {/* scuffed way of adding whitespace inbetween tags */}
                   {" "}
                   <Text as='span' display='inline'>
                     and

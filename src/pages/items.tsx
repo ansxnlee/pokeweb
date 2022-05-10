@@ -25,31 +25,31 @@ const CATEGORIES: Array<Category> = [
   {
     label: 'Trainer Utility',
     path: '/items/items/trainerUtility/repel.png',
-    href: '/items/trainer-utility'
+    href: '/items/trainerUtility'
   },
   {
     label: 'Evolution',
     path: '/items/items/evolution/moon-stone.png',
-    href: '#'
+    href: '/items/evolution'
   },
   {
     label: 'Fossils',
     path: '/items/items/fossils/helix-fossil.png',
-    href: '#'
+    href: '/items/fossils'
   },
   {
     label: 'Loot',
     path: '/items/items/loot/big-nugget.png',
-    href: '#'
+    href: '/items/loot'
   },
   {
     label: 'Collectables',
     path: '/items/items/collectables/heart-scale.png',
-    href: '#'
+    href: '/items/collectables'
   },
   {
     label: 'Mulch',
     path: '/items/items/mulch/growth-mulch.png',
-    href: '#'
+    href: '/items/mulch'
   },
 ];
