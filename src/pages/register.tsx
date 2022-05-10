@@ -6,29 +6,14 @@ import { MiniHeader } from '../components/MiniHeader';
 import { MiniFooter } from "../components/MiniFooter";
 import { FormikInputField } from "../components/FormikInputField";
 import Link from "next/link";
-import { useMutation } from 'urql';
+import { useRegisterMutation } from "../generated/graphql";
 
 interface registerProps {
 
 }
 
-const REGISTER_MUT = `
-mutation Mutation($password: String!, $username: String!) {
-  register(password: $password, username: $username) {
-    errors {
-      field
-      message
-    }
-    user {
-      id
-      username
-    }
-  }
-}
-`
-
 const Register: React.FC<registerProps> = ({}) => {
-  const [, register] = useMutation(REGISTER_MUT);
+  const [, register] = useRegisterMutation();
   return (
     <Container height="100vh">
       <MiniHeader />
@@ -36,7 +21,8 @@ const Register: React.FC<registerProps> = ({}) => {
         <Formik
           initialValues={{ username: '', password: '' }}
           onSubmit={(values) => {
-            return register({ username: values.username, password: values.password });
+            console.log("stuff was done");
+            //return register({ username: values.username, password: values.password });
           }}
         >
           {({ isSubmitting }) => (
