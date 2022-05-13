@@ -1,0 +1,8 @@
+query Conninfo {
+  conninfo {
+    id
+    createdAt
+    updatedAt
+    username
+  }
+}

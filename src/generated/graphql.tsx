@@ -100,6 +100,14 @@ export type UserResponse = {
   user?: Maybe<User>;
 };
 
+export type LoginMutationVariables = Exact<{
+  password: Scalars['String'];
+  username: Scalars['String'];
+}>;
+
+
+export type LoginMutation = { __typename?: 'Mutation', login: { __typename?: 'UserResponse', errors?: Array<{ __typename?: 'FieldError', field: string, message: string }> | null, user?: { __typename?: 'User', id: number, createdAt: string, updatedAt: string, username: string } | null } };
+
 export type RegisterMutationVariables = Exact<{
   password: Scalars['String'];
   username: Scalars['String'];
@@ -108,7 +116,32 @@ export type RegisterMutationVariables = Exact<{
 
 export type RegisterMutation = { __typename?: 'Mutation', register: { __typename?: 'UserResponse', errors?: Array<{ __typename?: 'FieldError', field: string, message: string }> | null, user?: { __typename?: 'User', id: number, username: string } | null } };
 
+export type ConninfoQueryVariables = Exact<{ [key: string]: never; }>;
 
+
+export type ConninfoQuery = { __typename?: 'Query', conninfo?: { __typename?: 'User', id: number, createdAt: string, updatedAt: string, username: string } | null };
+
+
+export const LoginDocument = gql`
+    mutation Login($password: String!, $username: String!) {
+  login(password: $password, username: $username) {
+    errors {
+      field
+      message
+    }
+    user {
+      id
+      createdAt
+      updatedAt
+      username
+    }
+  }
+}
+    `;
+
+export function useLoginMutation() {
+  return Urql.useMutation<LoginMutation, LoginMutationVariables>(LoginDocument);
+};
 export const RegisterDocument = gql`
     mutation Register($password: String!, $username: String!) {
   register(password: $password, username: $username) {
@@ -126,4 +159,18 @@ export const RegisterDocument = gql`
 
 export function useRegisterMutation() {
   return Urql.useMutation<RegisterMutation, RegisterMutationVariables>(RegisterDocument);
+};
+export const ConninfoDocument = gql`
+    query Conninfo {
+  conninfo {
+    id
+    createdAt
+    updatedAt
+    username
+  }
+}
+    `;
+
+export function useConninfoQuery(options?: Omit<Urql.UseQueryArgs<ConninfoQueryVariables>, 'query'>) {
+  return Urql.useQuery<ConninfoQuery>({ query: ConninfoDocument, ...options });
 };

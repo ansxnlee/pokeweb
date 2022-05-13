@@ -13,6 +13,7 @@
     "@emotion/styled": "^11",
     "@graphql-codegen/cli": "^2.6.2",
     "@graphql-codegen/typescript-urql": "^3.5.10",
+    "@urql/exchange-graphcache": "^4.4.0",
     "formik": "^2.2.9",
     "framer-motion": "^6",
     "graphql": "^16.5.0",

@@ -3,6 +3,7 @@ import { SearchIcon } from '@chakra-ui/icons';
 import { DarkModeSwitch } from './DarkModeSwitch'
 import { Titlecard } from './Titlecard';
 import Link from "next/link";
+import { ConnInfo } from "./connInfo";
 
 const searchClick = () => {
   console.log("search pressed");
@@ -25,18 +26,14 @@ export const Header = () => (
       <Input variant='filled' placeholder='Search for item..' flexGrow={1} />
       <Button onClick={searchClick}>{<SearchIcon />}</Button>
     </InputGroup>
-    <ButtonGroup gap='2'>
+    <ButtonGroup gap='2' alignItems='center'>
       <DarkModeSwitch />
       <Link href='/register'>
         <Button colorScheme='purple'>
           Register
         </Button>
       </Link>
-      <Link href='/login'>
-        <Button colorScheme='blue'>
-          Login
-        </Button>
-      </Link>
+        <ConnInfo />
       <Button colorScheme='yellow'>Cart</Button>
     </ButtonGroup>
   </Flex>

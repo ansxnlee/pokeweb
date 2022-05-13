@@ -7,6 +7,8 @@ import { MiniFooter } from "../components/MiniFooter";
 import { FormikInputField } from "../components/FormikInputField";
 import Link from "next/link";
 import { useRegisterMutation } from "../generated/graphql";
+import { arrayToErrorObj } from "../utility/arrayToErrorObj";
+import { useRouter } from "next/router";
 
 interface registerProps {
 
@@ -14,15 +16,28 @@ interface registerProps {
 
 const Register: React.FC<registerProps> = ({}) => {
   const [, register] = useRegisterMutation();
+  const router = useRouter();
   return (
     <Container height="100vh">
       <MiniHeader />
       <Flex mx='auto' justifyContent='center' p='10'>
         <Formik
           initialValues={{ username: '', password: '' }}
-          onSubmit={(values) => {
-            console.log("stuff was done");
-            //return register({ username: values.username, password: values.password });
+          onSubmit={async (values, { setErrors }) => {
+            const response = await register({ username: values.username, password: values.password });
+            if (response.data?.register.errors) {
+              // explicitly
+              // [{ field: 'username', message: 'error msg' }]
+              // setErrors({
+              //   username: "sample error msg",
+              // });
+              
+              // helper function that does the same logic
+              // formik errors will now display the exact errors that the server throws
+              setErrors(arrayToErrorObj(response.data.register.errors));
+            } else if (response.data?.register.user) {
+              router.push('/login');
+            }
           }}
         >
           {({ isSubmitting }) => (
