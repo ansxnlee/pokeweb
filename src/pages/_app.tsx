@@ -5,6 +5,7 @@ import { AppProps } from 'next/app'
 
 import { createClient, dedupExchange, fetchExchange, Provider } from 'urql';
 import { cacheExchange } from '@urql/exchange-graphcache';
+import { gql } from '@urql/core';
 
 import { ConninfoDocument } from '../generated/graphql'
 
@@ -13,26 +14,32 @@ const client = createClient({
   fetchOptions: {
     credentials: "include",
   },
-  // exchanges: [
-  //   dedupExchange, 
-  //   cacheExchange({
-  //     updates: {
-  //       Mutation: {
-  //         login: (result, args, cache, info) => {
-  //           cache.updateQuery({ query: ConninfoDocument }) => {
-  //             data.value
-  //           });
-  //         },
-  //       },
-  //       Subscription: {
-  //         subscriptionField: (result, args, cache, info) => {
-  //           // ...
-  //         },
-  //       },
-  //     },
-  //   }), 
-  //   fetchExchange
-  // ],
+  exchanges: [
+    dedupExchange, 
+    cacheExchange({
+      updates: {
+        Mutation: {
+          mutationField: (result, args, cache, info) => {
+            // ...
+            const fragment = gql`
+              fragment _ on User {
+                username
+                password
+              }
+            `;
+            cache.writeFragment(fragment, { username: args.username, password: args.password })
+          },
+        },
+        Subscription: {
+          subscriptionField: (result, args, cache, info) => {
+            // ...
+          },
+        },
+      },
+    }), 
+    fetchExchange
+  ],
+  
 });
 
 function MyApp({ Component, pageProps }: AppProps) {

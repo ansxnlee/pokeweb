@@ -1,10 +1,11 @@
-import { Box, Button, ButtonGroup, Flex, Text } from "@chakra-ui/react";
+import { Button, ButtonGroup, Flex, Text } from "@chakra-ui/react";
 import Link from "next/link";
-import { useConninfoQuery } from "../generated/graphql";
+import { useConninfoQuery, useLogoutMutation } from "../generated/graphql";
 
 
 export const ConnInfo = () => {
   const [{ data, fetching }] = useConninfoQuery();
+  const [{ fetching: logoutFetching }, logout] = useLogoutMutation();
   let userBody = null;
 
   // conditionally render username and login button
@@ -31,7 +32,14 @@ export const ConnInfo = () => {
         gap='4' 
       >
         <Text>Hello, {data.conninfo.username}</Text>
-        <Button colorScheme='red' variant='outline'>Logout</Button>
+        <Button 
+          colorScheme='red' 
+          variant='outline'
+          onClick={() => {logout();}}
+          isLoading={logoutFetching}
+        >
+          Logout
+        </Button>
       </Flex>
     )
   }
