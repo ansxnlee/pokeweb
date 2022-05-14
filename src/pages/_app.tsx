@@ -4,10 +4,20 @@ import theme from '../theme'
 import { AppProps } from 'next/app'
 
 import { createClient, dedupExchange, fetchExchange, Provider } from 'urql';
-import { cacheExchange } from '@urql/exchange-graphcache';
-import { gql } from '@urql/core';
+import { cacheExchange, Cache, QueryInput } from '@urql/exchange-graphcache';
 
-import { ConninfoDocument } from '../generated/graphql'
+import { ConninfoDocument, ConninfoQuery, LoginMutation, LogoutMutation } from '../generated/graphql'
+
+// custom wrapper for cacheExchange mutation types
+// def find a better way to do urql cache updates
+function altUpdateQuery<Result, Query>(
+  cache: Cache,
+  qi: QueryInput,
+  result: any,
+  fn: (r: Result, q: Query) => Query
+) {
+  return cache.updateQuery(qi, data => fn(result, data as any) as any);
+}
 
 const client = createClient({
   url: 'http://localhost:4000/graphql',
@@ -19,20 +29,30 @@ const client = createClient({
     cacheExchange({
       updates: {
         Mutation: {
-          mutationField: (result, args, cache, info) => {
-            // ...
-            const fragment = gql`
-              fragment _ on User {
-                username
-                password
+          login: (_result, args, cache, info) => {
+            // cache.updateQuery({ query: ConninfoDocument }, (data: ConninfoQuery) => {});
+            altUpdateQuery<LoginMutation, ConninfoQuery>(
+              cache, 
+              { query: ConninfoDocument},
+              _result,
+              (result, query) => {
+                if (result.login.errors) {
+                  return query
+                } else {
+                  return {
+                    conninfo: result.login.user,
+                  }
+                };
               }
-            `;
-            cache.writeFragment(fragment, { username: args.username, password: args.password })
+            );
           },
-        },
-        Subscription: {
-          subscriptionField: (result, args, cache, info) => {
-            // ...
+          logout: (_result, args, cache, info) => {
+            altUpdateQuery<LogoutMutation, ConninfoQuery>(
+              cache,
+              { query: ConninfoDocument },
+              _result,
+              (result, query) => ({ conninfo: null })
+            )
           },
         },
       },

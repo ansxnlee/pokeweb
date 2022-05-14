@@ -101,13 +101,15 @@ export type UserResponse = {
   user?: Maybe<User>;
 };
 
+export type UserFieldsFragment = { __typename?: 'User', id: number, username: string };
+
 export type LoginMutationVariables = Exact<{
   password: Scalars['String'];
   username: Scalars['String'];
 }>;
 
 
-export type LoginMutation = { __typename?: 'Mutation', login: { __typename?: 'UserResponse', errors?: Array<{ __typename?: 'FieldError', field: string, message: string }> | null, user?: { __typename?: 'User', id: number, createdAt: string, updatedAt: string, username: string } | null } };
+export type LoginMutation = { __typename?: 'Mutation', login: { __typename?: 'UserResponse', errors?: Array<{ __typename?: 'FieldError', field: string, message: string }> | null, user?: { __typename?: 'User', id: number, username: string } | null } };
 
 export type LogoutMutationVariables = Exact<{ [key: string]: never; }>;
 
@@ -125,9 +127,14 @@ export type RegisterMutation = { __typename?: 'Mutation', register: { __typename
 export type ConninfoQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type ConninfoQuery = { __typename?: 'Query', conninfo?: { __typename?: 'User', id: number, createdAt: string, updatedAt: string, username: string } | null };
+export type ConninfoQuery = { __typename?: 'Query', conninfo?: { __typename?: 'User', id: number, username: string } | null };
 
-
+export const UserFieldsFragmentDoc = gql`
+    fragment userFields on User {
+  id
+  username
+}
+    `;
 export const LoginDocument = gql`
     mutation Login($password: String!, $username: String!) {
   login(password: $password, username: $username) {
@@ -136,14 +143,11 @@ export const LoginDocument = gql`
       message
     }
     user {
-      id
-      createdAt
-      updatedAt
-      username
+      ...userFields
     }
   }
 }
-    `;
+    ${UserFieldsFragmentDoc}`;
 
 export function useLoginMutation() {
   return Urql.useMutation<LoginMutation, LoginMutationVariables>(LoginDocument);
@@ -165,12 +169,11 @@ export const RegisterDocument = gql`
       message
     }
     user {
-      id
-      username
+      ...userFields
     }
   }
 }
-    `;
+    ${UserFieldsFragmentDoc}`;
 
 export function useRegisterMutation() {
   return Urql.useMutation<RegisterMutation, RegisterMutationVariables>(RegisterDocument);
@@ -178,13 +181,10 @@ export function useRegisterMutation() {
 export const ConninfoDocument = gql`
     query Conninfo {
   conninfo {
-    id
-    createdAt
-    updatedAt
-    username
+    ...userFields
   }
 }
-    `;
+    ${UserFieldsFragmentDoc}`;
 
 export function useConninfoQuery(options?: Omit<Urql.UseQueryArgs<ConninfoQueryVariables>, 'query'>) {
   return Urql.useQuery<ConninfoQuery>({ query: ConninfoDocument, ...options });
