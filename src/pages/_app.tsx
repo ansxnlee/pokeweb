@@ -4,20 +4,10 @@ import theme from '../theme'
 import { AppProps } from 'next/app'
 
 import { createClient, dedupExchange, fetchExchange, Provider } from 'urql';
-import { cacheExchange, Cache, QueryInput } from '@urql/exchange-graphcache';
+import { cacheExchange } from '@urql/exchange-graphcache';
 
 import { ConninfoDocument, ConninfoQuery, LoginMutation, LogoutMutation } from '../generated/graphql'
-
-// custom wrapper for cacheExchange mutation types
-// def find a better way to do urql cache updates
-function altUpdateQuery<Result, Query>(
-  cache: Cache,
-  qi: QueryInput,
-  result: any,
-  fn: (r: Result, q: Query) => Query
-) {
-  return cache.updateQuery(qi, data => fn(result, data as any) as any);
-}
+import { altUpdateQuery } from '../utility/altUpdateQuery';
 
 const client = createClient({
   url: 'http://localhost:4000/graphql',
