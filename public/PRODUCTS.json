@@ -5,7 +5,7 @@
         "effect": "Used on a party Pokémon : Evolves a male kirlia into gallade or a female snorunt into froslass.",
         "itemId": 109,
         "name": "dawn-stone",
-        "name-en": "Dawn Stone",
+        "nameEng": "Dawn Stone",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dawn-stone.png",
         "text": "A peculiar stone that makes certain species of Pokémon evolve. It sparkles like eyes."
     },
@@ -15,7 +15,7 @@
         "effect": "Held by Seadra: Evolves the holder into Kingdra when traded.",
         "itemId": 212,
         "name": "dragon-scale",
-        "name-en": "Dragon Scale",
+        "nameEng": "Dragon Scale",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dragon-scale.png",
         "text": "A thick and tough scale. Dragon-type Pokémon may be holding this item when caught."
     },
@@ -25,7 +25,7 @@
         "effect": "Held by Porygon2: Evolves the holder into Porygon-Z when traded.",
         "itemId": 301,
         "name": "dubious-disc",
-        "name-en": "Dubious Disc",
+        "nameEng": "Dubious Disc",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dubious-disc.png",
         "text": "A transparent device overflowing with dubious data. Its producer is unknown."
     },
@@ -35,7 +35,7 @@
         "effect": "Used on a party Pokémon : Evolves a lampent into chandelure, a misdreavus into mismagius, or a murkrow into honchkrow.",
         "itemId": 108,
         "name": "dusk-stone",
-        "name-en": "Dusk Stone",
+        "nameEng": "Dusk Stone",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dusk-stone.png",
         "text": "A peculiar stone that makes certain species of Pokémon evolve. It is as dark as dark can be."
     },
@@ -45,7 +45,7 @@
         "effect": "Held by Electabuzz: Evolves the holder into Electivire when traded.",
         "itemId": 299,
         "name": "electirizer",
-        "name-en": "Electirizer",
+        "nameEng": "Electirizer",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/electirizer.png",
         "text": "A box packed with a tremendous amount of electric energy. It is loved by a certain Pokémon."
     },
@@ -55,7 +55,7 @@
         "effect": "Used on a party Pokémon : Evolves an eevee into flareon, a growlithe into arcanine, a pansear into simisear, or a vulpix into ninetales.",
         "itemId": 82,
         "name": "fire-stone",
-        "name-en": "Fire Stone",
+        "nameEng": "Fire Stone",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fire-stone.png",
         "text": "A peculiar stone that makes certain species of Pokémon evolve. It is colored orange."
     },
@@ -65,7 +65,7 @@
         "effect": "Used on a party Pokémon : Evolves an Alola sandshrew into Alola sandslash or an Alola vulpix into Alola ninetales.",
         "itemId": 885,
         "name": "ice-stone",
-        "name-en": "Ice Stone",
+        "nameEng": "Ice Stone",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ice-stone.png",
         "text": "A peculiar stone that can make certain species of Pokémon evolve. It has an unmistakable snowflake pattern."
     },
@@ -75,7 +75,7 @@
         "effect": "Used on a party Pokémon : Evolves an exeggcute into exeggutor, a gloom into vileplume, a nuzleaf into shiftry, a pansage into simisage, or a weepinbell into victreebel.",
         "itemId": 85,
         "name": "leaf-stone",
-        "name-en": "Leaf Stone",
+        "nameEng": "Leaf Stone",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/leaf-stone.png",
         "text": "A peculiar stone that makes certain species of Pokémon evolve. It has a leaf pattern."
     },
@@ -85,7 +85,7 @@
         "effect": "Held by Magmar: Evolves the holder into Magmortar when traded.",
         "itemId": 300,
         "name": "magmarizer",
-        "name-en": "Magmarizer",
+        "nameEng": "Magmarizer",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/magmarizer.png",
         "text": "A box packed with a tremendous amount of magma energy. It is loved by a certain Pokémon."
     },
@@ -95,7 +95,7 @@
         "effect": "Used on a party Pokémon : Evolves a clefairy into clefable, a jigglypuff into wigglytuff, a munna into musharna, a nidorina into nidoqueen, a nidorino into nidoking, or a skitty into delcatty.",
         "itemId": 81,
         "name": "moon-stone",
-        "name-en": "Moon Stone",
+        "nameEng": "Moon Stone",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/moon-stone.png",
         "text": "A peculiar stone that makes certain species of Pokémon evolve. It is as black as the night sky."
     },
@@ -105,7 +105,7 @@
         "effect": "Held by happiny : Holder evolves into chansey when it levels up during the daytime.",
         "itemId": 110,
         "name": "oval-stone",
-        "name-en": "Oval Stone",
+        "nameEng": "Oval Stone",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/oval-stone.png",
         "text": "A peculiar stone that makes certain species of Pokémon evolve. It is shaped like an egg."
     },
@@ -115,7 +115,7 @@
         "effect": "Held by feebas : Holder evolves into milotic when traded.",
         "itemId": 580,
         "name": "prism-scale",
-        "name-en": "Prism Scale",
+        "nameEng": "Prism Scale",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/prism-scale.png",
         "text": "A mysterious scale that evolves certain Pokémon. It shines in rainbow colors."
     },
@@ -125,7 +125,7 @@
         "effect": "Held by Rhydon: Evolves the holder into Rhyperior when traded.",
         "itemId": 298,
         "name": "protector",
-        "name-en": "Protector",
+        "nameEng": "Protector",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/protector.png",
         "text": "A protective item of some sort. It is extremely stiff and heavy. It is loved by a certain Pokémon."
     },
@@ -135,7 +135,7 @@
         "effect": "Held by Dusclops: Evolves the holder into Dusknoir when traded.",
         "itemId": 302,
         "name": "reaper-cloth",
-        "name-en": "Reaper Cloth",
+        "nameEng": "Reaper Cloth",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/reaper-cloth.png",
         "text": "A cloth imbued with horrifyingly strong spiritual energy. It is loved by a certain Pokémon."
     },
@@ -145,7 +145,7 @@
         "effect": "Traded on a Spritzee: Holder evolves into Aromatisse.",
         "itemId": 689,
         "name": "sachet",
-        "name-en": "Sachet",
+        "nameEng": "Sachet",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sachet.png",
         "text": "A sachet filled with fragrant perfumes that are just slightly too overwhelming. Yet it's loved by a certain Pokémon."
     },
@@ -155,7 +155,7 @@
         "effect": "Used on a party Pokémon : Evolves a minccino into cinccino, a roselia into roserade, or a togetic into togekiss.",
         "itemId": 107,
         "name": "shiny-stone",
-        "name-en": "Shiny Stone",
+        "nameEng": "Shiny Stone",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/shiny-stone.png",
         "text": "A peculiar stone that makes certain species of Pokémon evolve. It shines with a dazzling light."
     },
@@ -165,7 +165,7 @@
         "effect": "Used on a party Pokémon : Evolves a cottonee into whimsicott, a gloom into bellossom, a petilil into lilligant, or a sunkern into sunflora.",
         "itemId": 80,
         "name": "sun-stone",
-        "name-en": "Sun Stone",
+        "nameEng": "Sun Stone",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sun-stone.png",
         "text": "A peculiar stone that makes certain species of Pokémon evolve. It is as red as the sun."
     },
@@ -175,7 +175,7 @@
         "effect": "Used on a party Pokémon : Evolves an eelektrik into eelektross, an eevee into jolteon, or a pikachu into raichu.",
         "itemId": 83,
         "name": "thunder-stone",
-        "name-en": "Thunder Stone",
+        "nameEng": "Thunder Stone",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/thunder-stone.png",
         "text": "A peculiar stone that makes certain species of Pokémon evolve. It has a thunderbolt pattern."
     },
@@ -185,7 +185,7 @@
         "effect": "Held by Porygon: Evolves the holder into Porygon2 when traded.",
         "itemId": 229,
         "name": "up-grade",
-        "name-en": "Upgrade",
+        "nameEng": "Upgrade",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/up-grade.png",
         "text": "A transparent device filled with all sorts of data. It was produced by Silph Co."
     },
@@ -195,7 +195,7 @@
         "effect": "Used on a party Pokémon : Evolves an eevee into vaporeon, a lombre into ludicolo, a panpour into simipour, a poliwhirl into poliwrath, a shellder into cloyster, or a staryu into starmie.",
         "itemId": 84,
         "name": "water-stone",
-        "name-en": "Water Stone",
+        "nameEng": "Water Stone",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/water-stone.png",
         "text": "A peculiar stone that makes certain species of Pokémon evolve. It is a clear, light blue."
     },
@@ -205,7 +205,7 @@
         "effect": "Traded on a Swirlix: Holder evolves into Slurpuff.",
         "itemId": 686,
         "name": "whipped-dream",
-        "name-en": "Whipped Dream",
+        "nameEng": "Whipped Dream",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/whipped-dream.png",
         "text": "A soft and sweet treat made of fluffy, puffy, whipped and whirled cream. It's loved by a certain Pokémon."
     },
@@ -215,7 +215,7 @@
         "effect": "Used on a party Pokémon : Restores 20 HP.",
         "itemId": 43,
         "name": "berry-juice",
-        "name-en": "Berry Juice",
+        "nameEng": "Berry Juice",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/berry-juice.png",
         "text": "A 100% pure juice made of Berries. It restores the HP of one Pokémon by just 20 points."
     },
@@ -225,7 +225,7 @@
         "effect": "Used on a party Pokémon : Restores 50 HP. Decreases happiness by 5/5/10.",
         "itemId": 34,
         "name": "energy-powder",
-        "name-en": "Energy Powder",
+        "nameEng": "Energy Powder",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/energy-powder.png",
         "text": "A very bitter medicine powder. It restores the HP of one Pokémon by 50 points."
     },
@@ -235,7 +235,7 @@
         "effect": "Used on a party Pokémon : Restores 200 HP. Decreases happiness by 10/10/15.",
         "itemId": 35,
         "name": "energy-root",
-        "name-en": "Energy Root",
+        "nameEng": "Energy Root",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/energy-root.png",
         "text": "A very bitter root. It restores the HP of one Pokémon by 200 points."
     },
@@ -245,7 +245,7 @@
         "effect": "Used on a party Pokémon : Restores 50 HP.",
         "itemId": 30,
         "name": "fresh-water",
-        "name-en": "Fresh Water",
+        "nameEng": "Fresh Water",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fresh-water.png",
         "text": "Water with a high mineral content. It restores the HP of one Pokémon by 50 points."
     },
@@ -255,7 +255,7 @@
         "effect": "Used on a party Pokémon : Restores HP to full and cures any status ailment and confusion.",
         "itemId": 23,
         "name": "full-restore",
-        "name-en": "Full Restore",
+        "nameEng": "Full Restore",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/full-restore.png",
         "text": "A medicine that fully restores the HP and heals any status problems of a single Pokémon."
     },
@@ -265,7 +265,7 @@
         "effect": "Used on a party Pokémon : Restores 200 HP.",
         "itemId": 25,
         "name": "hyper-potion",
-        "name-en": "Hyper Potion",
+        "nameEng": "Hyper Potion",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/hyper-potion.png",
         "text": "A spray-type medicine for wounds. It restores the HP of one Pokémon by 200 points."
     },
@@ -275,7 +275,7 @@
         "effect": "Used on a party Pokémon : Restores 80 HP.",
         "itemId": 32,
         "name": "lemonade",
-        "name-en": "Lemonade",
+        "nameEng": "Lemonade",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lemonade.png",
         "text": "A very sweet drink. It restores the HP of one Pokémon by 80 points."
     },
@@ -285,7 +285,7 @@
         "effect": "Used on a party Pokémon : Restores HP to full.",
         "itemId": 24,
         "name": "max-potion",
-        "name-en": "Max Potion",
+        "nameEng": "Max Potion",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/max-potion.png",
         "text": "A spray-type medicine for wounds. It completely restores the HP of a single Pokémon."
     },
@@ -295,7 +295,7 @@
         "effect": "Used on a party Pokémon : Restores 100 HP.",
         "itemId": 33,
         "name": "moomoo-milk",
-        "name-en": "Moomoo Milk",
+        "nameEng": "Moomoo Milk",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/moomoo-milk.png",
         "text": "Milk with a very high nutrition content. It restores the HP of one Pokémon by 100 points."
     },
@@ -305,7 +305,7 @@
         "effect": "Used on a friendly Pokémon : Restores 20 HP.",
         "itemId": 17,
         "name": "potion",
-        "name-en": "Potion",
+        "nameEng": "Potion",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/potion.png",
         "text": "A spray-type medicine for wounds. It restores the HP of one Pokémon by just 20 points."
     },
@@ -315,7 +315,7 @@
         "effect": "Used on a party Pokémon : Restores 60 HP.",
         "itemId": 31,
         "name": "soda-pop",
-        "name-en": "Soda Pop",
+        "nameEng": "Soda Pop",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/soda-pop.png",
         "text": "A fizzy soda drink. It restores the HP of one Pokémon by 60 points."
     },
@@ -325,7 +325,7 @@
         "effect": "Used on a party Pokémon : Restores 50 HP.",
         "itemId": 26,
         "name": "super-potion",
-        "name-en": "Super Potion",
+        "nameEng": "Super Potion",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/super-potion.png",
         "text": "A spray-type medicine for wounds. It restores the HP of one Pokémon by 50 points."
     },
@@ -335,7 +335,7 @@
         "effect": "Used on a friendly Pokémon : Restores 20 HP.",
         "itemId": 567,
         "name": "sweet-heart",
-        "name-en": "Sweet Heart",
+        "nameEng": "Sweet Heart",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sweet-heart.png",
         "text": "Very sweet chocolate. It restores the HP of one Pokémon by only 20 points."
     },
@@ -345,7 +345,7 @@
         "effect": "Held in battle : When the holder is frozen, it consumes this item to thaw itself. Used on a party Pokémon : Cures freezing.",
         "itemId": 130,
         "name": "aspear-berry",
-        "name-en": "Aspear Berry",
+        "nameEng": "Aspear Berry",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/aspear-berry.png",
         "text": "It may be used or held by a Pokémon to defrost it. "
     },
@@ -355,7 +355,7 @@
         "effect": "Held in battle : When the holder is paralyzed, it consumes this item to cure the paralysis. Used on a party Pokémon : Cures paralysis.",
         "itemId": 126,
         "name": "cheri-berry",
-        "name-en": "Cheri Berry",
+        "nameEng": "Cheri Berry",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/cheri-berry.png",
         "text": "It may be used or held by a Pokémon to recover from paralysis."
     },
@@ -365,7 +365,7 @@
         "effect": "Held in battle : When the holder is asleep, it consumes this item to wake up. Used on a party Pokémon : Cures sleep.",
         "itemId": 127,
         "name": "chesto-berry",
-        "name-en": "Chesto Berry",
+        "nameEng": "Chesto Berry",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/chesto-berry.png",
         "text": "It may be used or held by a Pokémon to recover from sleep."
     },
@@ -375,7 +375,7 @@
         "effect": "Held in battle : When the holder is out of PP for one of its moves, it consumes this item to restore 10 of that move's PP. Used on a party Pokémon : Restores 10 PP for a selected move.",
         "itemId": 131,
         "name": "leppa-berry",
-        "name-en": "Leppa Berry",
+        "nameEng": "Leppa Berry",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/leppa-berry.png",
         "text": "It may be used or held by a Pokémon to restore a move's PP by 10."
     },
@@ -385,7 +385,7 @@
         "effect": "Held in battle : When the holder is afflicted with a major status ailment, it consumes this item to cure the ailment. Used on a party Pokémon : Cures any major status ailment.",
         "itemId": 134,
         "name": "lum-berry",
-        "name-en": "Lum Berry",
+        "nameEng": "Lum Berry",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lum-berry.png",
         "text": "It may be used or held by a Pokémon to recover from any status problem."
     },
@@ -395,7 +395,7 @@
         "effect": "Held in battle : When the holder has 1/2 its max HP remaining or less, it consumes this item to restore 10 HP. Used on a party Pokémon : Restores 10 HP.",
         "itemId": 132,
         "name": "oran-berry",
-        "name-en": "Oran Berry",
+        "nameEng": "Oran Berry",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/oran-berry.png",
         "text": "It may be used or held by a Pokémon to heal the user by just 10 HP."
     },
@@ -405,7 +405,7 @@
         "effect": "Held in battle : When the holder is poisoned, it consumes this item to cure the poison. Used on a party Pokémon : Cures poison.",
         "itemId": 128,
         "name": "pecha-berry",
-        "name-en": "Pecha Berry",
+        "nameEng": "Pecha Berry",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pecha-berry.png",
         "text": "It may be used or held by a Pokémon to recover from poison."
     },
@@ -415,7 +415,7 @@
         "effect": "Held in battle : When the holder is confused, it consumes this item to cure the confusion. Used on a party Pokémon : Cures confusion.",
         "itemId": 133,
         "name": "persim-berry",
-        "name-en": "Persim Berry",
+        "nameEng": "Persim Berry",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/persim-berry.png",
         "text": "It may be used or held by a Pokémon to recover from confusion."
     },
@@ -425,7 +425,7 @@
         "effect": "Held in battle : When the holder is burned, it consumes this item to cure the burn. Used on a party Pokémon : Cures a burn.",
         "itemId": 129,
         "name": "rawst-berry",
-        "name-en": "Rawst Berry",
+        "nameEng": "Rawst Berry",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rawst-berry.png",
         "text": "It may be used or held by a Pokémon to recover from a burn."
     },
@@ -435,7 +435,7 @@
         "effect": "Held in battle : When the holder has 1/2 its max HP remaining or less, it consumes this item to restore 1/4 its max HP. Used on a party Pokémon : Restores 1/4 the Pokémon's max HP.",
         "itemId": 135,
         "name": "sitrus-berry",
-        "name-en": "Sitrus Berry",
+        "nameEng": "Sitrus Berry",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sitrus-berry.png",
         "text": "It may be used or held by a Pokémon to heal the user's HP a little."
     },
@@ -445,7 +445,7 @@
         "effect": "Used on a party Pokémon : Restores 10 PP for each move.",
         "itemId": 40,
         "name": "elixir",
-        "name-en": "Elixir",
+        "nameEng": "Elixir",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/elixir.png",
         "text": "It restores the PP of all the moves learned by the targeted Pokémon by 10 points each."
     },
@@ -455,7 +455,7 @@
         "effect": "Used on a party Pokémon : Restores 10 PP for a selected move.",
         "itemId": 38,
         "name": "ether",
-        "name-en": "Ether",
+        "nameEng": "Ether",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ether.png",
         "text": "It restores the PP of a Pokémon's selected move by a maximum of 10 points."
     },
@@ -465,7 +465,7 @@
         "effect": "Used on a party Pokémon : Restores PP to full for each move.",
         "itemId": 41,
         "name": "max-elixir",
-        "name-en": "Max Elixir",
+        "nameEng": "Max Elixir",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/max-elixir.png",
         "text": "It fully restores the PP of all the moves learned by the targeted Pokémon."
     },
@@ -475,7 +475,7 @@
         "effect": "Used on a party Pokémon : Restores PP to full for a selected move.",
         "itemId": 39,
         "name": "max-ether",
-        "name-en": "Max Ether",
+        "nameEng": "Max Ether",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/max-ether.png",
         "text": "It fully restores the PP of a single selected move that has been learned by the target Pokémon."
     },
@@ -485,7 +485,7 @@
         "effect": "Used on a party Pokémon : Revives the Pokémon and restores its HP to full.",
         "itemId": 29,
         "name": "max-revive",
-        "name-en": "Max Revive",
+        "nameEng": "Max Revive",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/max-revive.png",
         "text": "A medicine that revives a fainted Pokémon. It fully restores the Pokémon's HP."
     },
@@ -495,7 +495,7 @@
         "effect": "Used on a party Pokémon : Revives a fainted Pokémon and restores its HP to full. Decreases happiness by 10/10/15.",
         "itemId": 37,
         "name": "revival-herb",
-        "name-en": "Revival Herb",
+        "nameEng": "Revival Herb",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/revival-herb.png",
         "text": "A very bitter medicinal herb. It revives a fainted Pokémon, fully restoring its HP."
     },
@@ -505,7 +505,7 @@
         "effect": "Used on a party Pokémon : Revives the Pokémon and restores half its HP.",
         "itemId": 28,
         "name": "revive",
-        "name-en": "Revive",
+        "nameEng": "Revive",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/revive.png",
         "text": "A medicine that revives a fainted Pokémon. It restores half the Pokémon’s maximum HP."
     },
@@ -515,7 +515,7 @@
         "effect": "Used : Revives all fainted Pokémon in the party and restores their HP to full.",
         "itemId": 44,
         "name": "sacred-ash",
-        "name-en": "Sacred Ash",
+        "nameEng": "Sacred Ash",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sacred-ash.png",
         "text": "It revives all fainted Pokémon. In doing so, it also fully restores their HP."
     },
@@ -525,7 +525,7 @@
         "effect": "Used in battle : Attempts to catch a wild Pokémon. If the wild Pokémon is an Ultra Beast, this ball has a catch rate of 5x. Otherwise, it has a catch rate of 0.1x. If used in a trainer battle, nothing happens and the ball is lost.",
         "itemId": 887,
         "name": "beast-ball",
-        "name-en": "Beast Ball",
+        "nameEng": "Beast Ball",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/beast-ball.png",
         "text": "A special Poké Ball designed to catch Ultra Beasts. It has a low success rate for catching others."
     },
@@ -535,7 +535,7 @@
         "effect": "Used in battle : Attempts to catch a wild Pokémon, using a catch rate of 1x. If used in a trainer battle, nothing happens and the ball is lost.",
         "itemId": 16,
         "name": "cherish-ball",
-        "name-en": "Cherish Ball",
+        "nameEng": "Cherish Ball",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/cherish-ball.png",
         "text": "A quite rare Poké Ball that has been specially crafted to commemorate an occasion of some sort."
     },
@@ -545,7 +545,7 @@
         "effect": "Used in battle : Attempts to catch a wild Pokémon. If the wild Pokémon was encountered by surfing or fishing, this ball has a catch rate of 3.5x. Otherwise, it has a catch rate of 1x. If used in a trainer battle, nothing happens and the ball is lost.",
         "itemId": 7,
         "name": "dive-ball",
-        "name-en": "Dive Ball",
+        "nameEng": "Dive Ball",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dive-ball.png",
         "text": "A somewhat different Poké Ball that works especially well on Pokémon that live in the sea."
     },
@@ -555,7 +555,7 @@
         "effect": "Can only be used in Entree Forest, to catch Pokémon encountered in the Dream World. Used in battle : Catches a wild Pokémon without fail.",
         "itemId": 617,
         "name": "dream-ball",
-        "name-en": "Dream Ball",
+        "nameEng": "Dream Ball",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dream-ball.png",
         "text": "A special Poké Ball that appears out of nowhere in a bag at the Entree Forest. It can catch any Pokémon."
     },
@@ -565,7 +565,7 @@
         "effect": "Used in battle : Attempts to catch a wild Pokémon. If it's currently nighttime or the wild Pokémon was encountered while walking in a cave, this ball has a catch rate of 3.5x. Otherwise, it has a catch rate of 1x. If used in a trainer battle, nothing happens and the ball is lost.",
         "itemId": 13,
         "name": "dusk-ball",
-        "name-en": "Dusk Ball",
+        "nameEng": "Dusk Ball",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dusk-ball.png",
         "text": "A somewhat different Poké Ball that makes it easier to catch wild Pokémon at night or in dark places like caves."
     },
@@ -575,7 +575,7 @@
         "effect": "Used in battle : Attempts to catch a wild Pokémon, using a catch rate of 1x. The caught Pokémon's HP is immediately restored, PP for all its moves is restored, and any status ailment is cured. If used in a trainer battle, nothing happens and the ball is lost.",
         "itemId": 14,
         "name": "heal-ball",
-        "name-en": "Heal Ball",
+        "nameEng": "Heal Ball",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/heal-ball.png",
         "text": "A remedial Poké Ball that restores the caught Pokémon’s HP and eliminates any status problem."
     },
@@ -585,7 +585,7 @@
         "effect": "Used in battle : Attempts to catch a wild Pokémon, using a catch rate of 1x. Whenever the caught Pokémon's happiness increases, it increases by one extra point. If used in a trainer battle, nothing happens and the ball is lost.",
         "itemId": 11,
         "name": "luxury-ball",
-        "name-en": "Luxury Ball",
+        "nameEng": "Luxury Ball",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/luxury-ball.png",
         "text": "A comfortable Poké Ball that makes a caught wild Pokémon quickly grow friendly."
     },
@@ -595,7 +595,7 @@
         "effect": "Used in battle : Attempts to catch a wild Pokémon. Has a catch rate of given by `(40 - level) / 10`, where `level` is the wild Pokémon's level, to a maximum of 3.9x for level 1 Pokémon. If the wild Pokémon's level is higher than 30, this ball has a catch rate of 1x. If used in a trainer battle, nothing happens and the ball is lost.",
         "itemId": 8,
         "name": "nest-ball",
-        "name-en": "Nest Ball",
+        "nameEng": "Nest Ball",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/nest-ball.png",
         "text": "A somewhat different Poké Ball that works especially well on weaker Pokémon in the wild."
     },
@@ -605,7 +605,7 @@
         "effect": "Used in battle : Attempts to catch a wild Pokémon. If the wild Pokémon is water- or bug-type, this ball has a catch rate of 3x. Otherwise, it has a catch rate of 1x. If used in a trainer battle, nothing happens and the ball is lost.",
         "itemId": 6,
         "name": "net-ball",
-        "name-en": "Net Ball",
+        "nameEng": "Net Ball",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/net-ball.png",
         "text": "A somewhat different Poké Ball that works especially well on Water- and Bug-type Pokémon."
     },
@@ -615,7 +615,7 @@
         "effect": "Used in battle : Attempts to catch a wild Pokémon, using a catch rate of 1x. If used in a trainer battle, nothing happens and the ball is lost.",
         "itemId": 12,
         "name": "premier-ball",
-        "name-en": "Premier Ball",
+        "nameEng": "Premier Ball",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/premier-ball.png",
         "text": "A somewhat rare Poké Ball that has been specially made to commemorate an event of some sort."
     },
@@ -625,7 +625,7 @@
         "effect": "Used in battle : Attempts to catch a wild Pokémon, using a catch rate of 4x on the first turn of a battle, but 1x any other time. If used in a trainer battle, nothing happens and the ball is lost.",
         "itemId": 15,
         "name": "quick-ball",
-        "name-en": "Quick Ball",
+        "nameEng": "Quick Ball",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/quick-ball.png",
         "text": "A somewhat different Poké Ball that provides a better catch rate if it is used at the start of a wild encounter."
     },
@@ -635,7 +635,7 @@
         "effect": "Used in battle : Attempts to catch a wild Pokémon. If the wild Pokémon's species is marked as caught in the trainer's Pokédex, this ball has a catch rate of 3x. Otherwise, it has a catch rate of 1x. If used in a trainer battle, nothing happens and the ball is lost.",
         "itemId": 9,
         "name": "repeat-ball",
-        "name-en": "Repeat Ball",
+        "nameEng": "Repeat Ball",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/repeat-ball.png",
         "text": "A somewhat different Poké Ball that works especially well on Pokémon species that were previously caught."
     },
@@ -645,7 +645,7 @@
         "effect": "Used in battle : Attempts to catch a wild Pokémon. Has a catch rate of 1.1x on the first turn of the battle and increases by 0.1x every turn, to a maximum of 4x on turn 30. If used in a trainer battle, nothing happens and the ball is lost.",
         "itemId": 10,
         "name": "timer-ball",
-        "name-en": "Timer Ball",
+        "nameEng": "Timer Ball",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/timer-ball.png",
         "text": "A somewhat different Ball that becomes progressively better the more turns there are in a battle."
     },
@@ -655,7 +655,7 @@
         "effect": "Used outside of battle : Decreases the wild Pokémon encounter rate by 50%.",
         "itemId": 68,
         "name": "black-flute",
-        "name-en": "Black Flute",
+        "nameEng": "Black Flute",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/black-flute.png",
         "text": "A black flute made from blown glass. Its melody makes wild Pokémon less likely to appear."
     },
@@ -665,7 +665,7 @@
         "effect": "Used outside of battle : Transports the trainer to the last-entered dungeon entrance. Cannot be used outside, in buildings, or in distortion world, sinnoh hall of origin 1, spear pillar, or turnback cave.",
         "itemId": 78,
         "name": "escape-rope",
-        "name-en": "Escape Rope",
+        "nameEng": "Escape Rope",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/escape-rope.png",
         "text": "A long, durable rope. Use it to escape instantly from a cave or a dungeon."
     },
@@ -675,7 +675,7 @@
         "effect": "Used in battle : Ends a wild battle. Cannot be used in trainer battles.",
         "itemId": 64,
         "name": "fluffy-tail",
-        "name-en": "Fluffy Tail",
+        "nameEng": "Fluffy Tail",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fluffy-tail.png",
         "text": "An item that attracts Pokémon. Use it to flee from any battle with a wild Pokémon."
     },
@@ -685,7 +685,7 @@
         "effect": "Used outside of battle : Trainer will skip encounters with wild Pokémon of a lower level than the lead party Pokémon. This effect wears off after the trainer takes 250 steps.",
         "itemId": 77,
         "name": "max-repel",
-        "name-en": "Max Repel",
+        "nameEng": "Max Repel",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/max-repel.png",
         "text": "An item that prevents weak wild Pokémon from appearing for 250 steps after its use."
     },
@@ -695,7 +695,7 @@
         "effect": "Used in battle : Ends a wild battle. Cannot be used in trainer battles.",
         "itemId": 63,
         "name": "poke-doll",
-        "name-en": "Poke Doll",
+        "nameEng": "Poke Doll",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-doll.png",
         "text": "A doll that attracts Pokémon. Use it to flee from any battle with a wild Pokémon."
     },
@@ -705,7 +705,7 @@
         "effect": "Used in battle : Ends a wild battle. Cannot be used in trainer battles.",
         "itemId": 618,
         "name": "poke-toy",
-        "name-en": "Poke Toy",
+        "nameEng": "Poke Toy",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-toy.png",
         "text": "An item that attracts Pokémon. Use it to flee from any battle with a wild Pokémon."
     },
@@ -715,7 +715,7 @@
         "effect": "Used outside of battle : Trainer will skip encounters with wild Pokémon of a lower level than the lead party Pokémon. This effect wears off after the trainer takes 100 steps.",
         "itemId": 79,
         "name": "repel",
-        "name-en": "Repel",
+        "nameEng": "Repel",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/repel.png",
         "text": "An item that prevents weak wild Pokémon from appearing for 100 steps after its use."
     },
@@ -725,7 +725,7 @@
         "effect": "Used outside of battle : Trainer will skip encounters with wild Pokémon of a lower level than the lead party Pokémon. This effect wears off after the trainer takes 200 steps.",
         "itemId": 76,
         "name": "super-repel",
-        "name-en": "Super Repel",
+        "nameEng": "Super Repel",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/super-repel.png",
         "text": "An item that prevents weak wild Pokémon from appearing for 200 steps after its use."
     },
@@ -735,7 +735,7 @@
         "effect": "Used outside of battle : Doubles the wild Pokémon encounter rate.",
         "itemId": 69,
         "name": "white-flute",
-        "name-en": "White Flute",
+        "nameEng": "White Flute",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/white-flute.png",
         "text": "A white flute made from blown glass. Its melody makes wild Pokémon more likely to appear."
     },
@@ -745,7 +745,7 @@
         "effect": "Used in battle : Attempts to catch a wild Pokémon, using a catch rate of 1.5x. If used in a trainer battle, nothing happens and the ball is lost.",
         "itemId": 3,
         "name": "great-ball",
-        "name-en": "Great Ball",
+        "nameEng": "Great Ball",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/great-ball.png",
         "text": "A good, high-performance Ball that provides a higher Pokémon catch rate than a standard Poké Ball."
     },
@@ -755,7 +755,7 @@
         "effect": "Used in battle : Catches a wild Pokémon without fail. If used in a trainer battle, nothing happens and the ball is lost.",
         "itemId": 1,
         "name": "master-ball",
-        "name-en": "Master Ball",
+        "nameEng": "Master Ball",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/master-ball.png",
         "text": "The best Ball with the ultimate level of performance. It will catch any wild Pokémon without fail."
     },
@@ -765,7 +765,7 @@
         "effect": "Used by a trainer in battle : Catches a wild Pokémon. This item can only be used in pal park.",
         "itemId": 456,
         "name": "park-ball",
-        "name-en": "Park Ball",
+        "nameEng": "Park Ball",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/park-ball.png",
         "text": "A special Poké Ball for the Pal Park."
     },
@@ -775,7 +775,7 @@
         "effect": "Used in battle : Attempts to catch a wild Pokémon, using a catch rate of 1x. If used in a trainer battle, nothing happens and the ball is lost.",
         "itemId": 4,
         "name": "poke-ball",
-        "name-en": "Poke Ball",
+        "nameEng": "Poke Ball",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png",
         "text": "A device for catching wild Pokémon. It is thrown like a ball at the target. It is designed as a capsule system."
     },
@@ -785,7 +785,7 @@
         "effect": "Used in battle : Attempts to catch a wild Pokémon, using a catch rate of 1.5x. This item can only be used in the great marsh or kanto safari zone.",
         "itemId": 5,
         "name": "safari-ball",
-        "name-en": "Safari Ball",
+        "nameEng": "Safari Ball",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/safari-ball.png",
         "text": "A special Poké Ball that is used only in the Great Marsh. It is decorated in a camouflage pattern."
     },
@@ -795,7 +795,7 @@
         "effect": "Used by a trainer in battle : Attempts to catch a wild Pokémon. The wild Pokémon's catch rate is 1.5x normal.",
         "itemId": 457,
         "name": "sport-ball",
-        "name-en": "Sport Ball",
+        "nameEng": "Sport Ball",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sport-ball.png",
         "text": "A special Poké Ball for the Bug-Catching Contest."
     },
@@ -805,7 +805,7 @@
         "effect": "Used in battle : Attempts to catch a wild Pokémon, using a catch rate of 2x. If used in a trainer battle, nothing happens and the ball is lost.",
         "itemId": 2,
         "name": "ultra-ball",
-        "name-en": "Ultra Ball",
+        "nameEng": "Ultra Ball",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ultra-ball.png",
         "text": "An ultra-performance Ball that provides a higher Pokémon catch rate than a Great Ball."
     },
@@ -815,7 +815,7 @@
         "effect": "Used on a party Pokémon : Cures poison.",
         "itemId": 18,
         "name": "antidote",
-        "name-en": "Antidote",
+        "nameEng": "Antidote",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/antidote.png",
         "text": "A spray-type medicine. It lifts the effect of poison from one Pokémon."
     },
@@ -825,7 +825,7 @@
         "effect": "Used on a party Pokémon : Cures sleep.",
         "itemId": 21,
         "name": "awakening",
-        "name-en": "Awakening",
+        "nameEng": "Awakening",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/awakening.png",
         "text": "A spray-type medicine. It awakens a Pokémon from the clutches of sleep."
     },
@@ -835,7 +835,7 @@
         "effect": "Cures major status ailments and confusion.",
         "itemId": 888,
         "name": "big-malasada",
-        "name-en": "Big Malasada",
+        "nameEng": "Big Malasada",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/big-malasada.png",
         "text": "The Alola region's local specialty—fried bread. It can be used once to heal all the status conditions of a Pokémon."
     },
@@ -845,7 +845,7 @@
         "effect": "Used on a party Pokémon : Cures a burn.",
         "itemId": 19,
         "name": "burn-heal",
-        "name-en": "Burn Heal",
+        "nameEng": "Burn Heal",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/burn-heal.png",
         "text": "A spray-type medicine. It heals a single Pokémon that is suffering from a burn."
     },
@@ -855,7 +855,7 @@
         "effect": "Used on a party Pokémon : Cures any status ailment and confusion.",
         "itemId": 632,
         "name": "casteliacone",
-        "name-en": "Casteliacone",
+        "nameEng": "Casteliacone",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/casteliacone.png",
         "text": "Castelia City's specialty, soft-serve ice cream. It heals all the status problems of a single Pokémon."
     },
@@ -865,7 +865,7 @@
         "effect": "Used on a party Pokémon : Cures any status ailment and confusion.",
         "itemId": 27,
         "name": "full-heal",
-        "name-en": "Full Heal",
+        "nameEng": "Full Heal",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/full-heal.png",
         "text": "A spray-type medicine. It heals all the status problems of a single Pokémon."
     },
@@ -875,7 +875,7 @@
         "effect": "Used on a party Pokémon : Cures any status ailment. Decreases happiness by 5/5/10.",
         "itemId": 36,
         "name": "heal-powder",
-        "name-en": "Heal Powder",
+        "nameEng": "Heal Powder",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/heal-powder.png",
         "text": "A very bitter medicine powder. It heals all the status problems of a single Pokémon."
     },
@@ -885,7 +885,7 @@
         "effect": "Used on a party Pokémon : Cures freezing.",
         "itemId": 20,
         "name": "ice-heal",
-        "name-en": "Ice Heal",
+        "nameEng": "Ice Heal",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ice-heal.png",
         "text": "A spray-type medicine. It defrosts a Pokémon that has been frozen solid."
     },
@@ -895,7 +895,7 @@
         "effect": "Used on a party Pokémon : Cures any status ailment and confusion.",
         "itemId": 42,
         "name": "lava-cookie",
-        "name-en": "Lava Cookie",
+        "nameEng": "Lava Cookie",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lava-cookie.png",
         "text": "Lavaridge Town's local specialty. It heals all the status problems of one Pokémon."
     },
@@ -905,7 +905,7 @@
         "effect": "Cures all major status ailments and confusion.",
         "itemId": 728,
         "name": "lumiose-galette",
-        "name-en": "Lumiose Galette",
+        "nameEng": "Lumiose Galette",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lumiose-galette.png",
         "text": "A popular treat in Lumiose City. It can be used once to heal all the status conditions of a Pokémon."
     },
@@ -915,7 +915,7 @@
         "effect": "Used on a party Pokémon : Cures any status ailment and confusion.",
         "itemId": 54,
         "name": "old-gateau",
-        "name-en": "Old Gateau",
+        "nameEng": "Old Gateau",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/old-gateau.png",
         "text": "Old Chateau's hidden specialty. It heals all the status problems of a single Pokémon."
     },
@@ -925,7 +925,7 @@
         "effect": "Used on a party Pokémon : Cures paralysis.",
         "itemId": 22,
         "name": "paralyze-heal",
-        "name-en": "Paralyze Heal",
+        "nameEng": "Paralyze Heal",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/paralyze-heal.png",
         "text": "A spray-type medicine. It eliminates paralysis from a single Pokémon."
     },
@@ -935,7 +935,7 @@
         "effect": "Cures any major status ailment and confusion.",
         "itemId": 765,
         "name": "shalour-sable",
-        "name-en": "Shalour Sable",
+        "nameEng": "Shalour Sable",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/shalour-sable.png",
         "text": "Shalour City’s famous shortbread. It can be used once to heal all the status conditions of a Pokémon."
     },
@@ -945,7 +945,7 @@
         "effect": "Switches a Pokémon between its two possible (non-Hidden) Abilities.",
         "itemId": 685,
         "name": "ability-capsule",
-        "name-en": "Ability Capsule",
+        "nameEng": "Ability Capsule",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ability-capsule.png",
         "text": "A capsule that allows a Pokémon with two Abilities to switch between these Abilities when it is used."
     },
@@ -955,7 +955,7 @@
         "effect": "Used on a party Pokémon : Increases Special Attack effort by 10, but won't increase it beyond 100. Increases happiness by 5/3/2.",
         "itemId": 49,
         "name": "calcium",
-        "name-en": "Calcium",
+        "nameEng": "Calcium",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/calcium.png",
         "text": "A nutritious drink for Pokémon. It raises the base Sp. Atk (Special Attack) stat of a single Pokémon."
     },
@@ -965,7 +965,7 @@
         "effect": "Used on a party Pokémon : Increases Speed effort by 10, but won't increase it beyond 100. Increases happiness by 5/3/2.",
         "itemId": 48,
         "name": "carbos",
-        "name-en": "Carbos",
+        "nameEng": "Carbos",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/carbos.png",
         "text": "A nutritious drink for Pokémon. It raises the base Speed stat of a single Pokémon."
     },
@@ -975,7 +975,7 @@
         "effect": "Used on a party Pokémon : Increases the target's Special Defense effort by 1.",
         "itemId": 610,
         "name": "clever-wing",
-        "name-en": "Clever Wing",
+        "nameEng": "Clever Wing",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/clever-wing.png",
         "text": "An item for use on a Pokémon. It slightly increases the base Sp. Def stat of a single Pokémon."
     },
@@ -985,7 +985,7 @@
         "effect": "Used on a party Pokémon : Increases the target's Special Attack effort by 1.",
         "itemId": 609,
         "name": "genius-wing",
-        "name-en": "Genius Wing",
+        "nameEng": "Genius Wing",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/genius-wing.png",
         "text": "An item for use on a Pokémon. It slightly increases the base Sp. Atk stat of a single Pokémon."
     },
@@ -995,7 +995,7 @@
         "effect": "Used on a party Pokémon : Increases the target's HP effort by 1.",
         "itemId": 606,
         "name": "health-wing",
-        "name-en": "Health Wing",
+        "nameEng": "Health Wing",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/health-wing.png",
         "text": "An item for use on a Pokémon. It slightly increases the base HP of a single Pokémon."
     },
@@ -1005,7 +1005,7 @@
         "effect": "Used on a party Pokémon : Increases HP effort by 10, but won't increase it beyond 100. Increases happiness by 5/3/2.",
         "itemId": 45,
         "name": "hp-up",
-        "name-en": "Hp Up",
+        "nameEng": "Hp Up",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/hp-up.png",
         "text": "A nutritious drink for Pokémon. It raises the base HP of a single Pokémon."
     },
@@ -1015,7 +1015,7 @@
         "effect": "Used on a party Pokémon : Increases Defense effort by 10, but won't increase it beyond 100. Increases happiness by 5/3/2.",
         "itemId": 47,
         "name": "iron",
-        "name-en": "Iron",
+        "nameEng": "Iron",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/iron.png",
         "text": "A nutritious drink for Pokémon. It raises the base Defense stat of a single Pokémon."
     },
@@ -1025,7 +1025,7 @@
         "effect": "Used on a party Pokémon : Increases the target's Attack effort by 1.",
         "itemId": 607,
         "name": "muscle-wing",
-        "name-en": "Muscle Wing",
+        "nameEng": "Muscle Wing",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/muscle-wing.png",
         "text": "An item for use on a Pokémon. It slightly increases the base Attack stat of a single Pokémon."
     },
@@ -1035,7 +1035,7 @@
         "effect": "Used on a party Pokémon : Increases a selected move's max PP to 1.6x its original max PP. Increases happiness by 5/3/2.",
         "itemId": 53,
         "name": "pp-max",
-        "name-en": "PP Max",
+        "nameEng": "PP Max",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pp-max.png",
         "text": "It maximally raises the top PP of a selected move that has been learned by the target Pokémon."
     },
@@ -1045,7 +1045,7 @@
         "effect": "Used on a party Pokémon : Increases a selected move's max PP by 20% its original max PP, to a maximum of 1.6x. Increases happiness by 5/3/2.",
         "itemId": 51,
         "name": "pp-up",
-        "name-en": "PP Up",
+        "nameEng": "PP Up",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pp-up.png",
         "text": "It slightly raises the maximum PP of a selected move that has been learned by the target Pokémon."
     },
@@ -1055,7 +1055,7 @@
         "effect": "Used on a party Pokémon : Increases Attack effort by 10, but won't increase it beyond 100. Increases happiness by 5/3/2.",
         "itemId": 46,
         "name": "protein",
-        "name-en": "Protein",
+        "nameEng": "Protein",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/protein.png",
         "text": "A nutritious drink for Pokémon. It raises the base Attack stat of a single Pokémon."
     },
@@ -1065,7 +1065,7 @@
         "effect": "Used on a party Pokémon : Increases level by 1. Increases happiness by 5/3/2.",
         "itemId": 50,
         "name": "rare-candy",
-        "name-en": "Rare Candy",
+        "nameEng": "Rare Candy",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rare-candy.png",
         "text": "A candy that is packed with energy. It raises the level of a single Pokémon by one."
     },
@@ -1075,7 +1075,7 @@
         "effect": "Used on a party Pokémon : Increases the target's Defense effort by 1.",
         "itemId": 608,
         "name": "resist-wing",
-        "name-en": "Resist Wing",
+        "nameEng": "Resist Wing",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/resist-wing.png",
         "text": "An item for use on a Pokémon. It slightly increases the base Defense stat of a single Pokémon."
     },
@@ -1085,7 +1085,7 @@
         "effect": "Used on a party Pokémon : Increases the target's Speed effort by 1.",
         "itemId": 611,
         "name": "swift-wing",
-        "name-en": "Swift Wing",
+        "nameEng": "Swift Wing",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/swift-wing.png",
         "text": "An item for use on a Pokémon. It slightly increases the base Speed stat of a single Pokémon."
     },
@@ -1095,7 +1095,7 @@
         "effect": "Used on a party Pokémon : Increases Special Defense effort by 10, but won't increase it beyond 100. Increases happiness by 5/3/2.",
         "itemId": 52,
         "name": "zinc",
-        "name-en": "Zinc",
+        "nameEng": "Zinc",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/zinc.png",
         "text": "A nutritious drink for Pokémon. It raises the base Sp. Def (Special Defense) stat of a single Pokémon."
     }

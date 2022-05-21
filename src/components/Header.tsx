@@ -4,6 +4,7 @@ import { DarkModeSwitch } from './DarkModeSwitch'
 import { Titlecard } from './Titlecard';
 import Link from "next/link";
 import { ConnInfo } from "./connInfo";
+import { Searchbar } from "./Searchbar";
 
 const searchClick = () => {
   console.log("search pressed");
@@ -23,8 +24,7 @@ export const Header = () => (
       </a>
     </Box>
     <InputGroup>
-      <Input variant='filled' placeholder='Search for item..' flexGrow={1} />
-      <Button onClick={searchClick}>{<SearchIcon />}</Button>
+      <Searchbar />
     </InputGroup>
     <ButtonGroup gap='2' alignItems='center'>
       <DarkModeSwitch />
