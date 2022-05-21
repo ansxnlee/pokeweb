@@ -1,4 +1,4 @@
-import { Button, Input, Flex, Box } from '@chakra-ui/react';
+import { Button, Input, Flex, Box, useColorModeValue } from '@chakra-ui/react';
 import { SearchIcon } from '@chakra-ui/icons';
 import { useState } from 'react';
 let data = require('../../public/PRODUCTS.json');
@@ -13,6 +13,7 @@ export const Searchbar = () => {
   const onSearch = (searchTerm) => {
     setValue(searchTerm)
   }
+
 
   return (
     <>
@@ -29,9 +30,8 @@ export const Searchbar = () => {
         <Box 
           position='absolute' 
           bg="gray.300" 
-          _dark={{ bg: '#555555' }} 
+          _dark={{ bg: 'gray.700' }} 
           width='100%'
-          px={{ base: 4 }} 
         >
           {data
             .filter((item) => {
@@ -46,13 +46,18 @@ export const Searchbar = () => {
             })
             .slice(0, 10)
             .map((item) => (
-              <div
-                onClick={() => onSearch(item.nameEng)}
-                className="dropdown-row"
-                key={item.nameEng}
-              >
-                {item.nameEng}
-              </div>
+              <>
+                <Flex
+                  onClick={() => onSearch(item.nameEng)}
+                  key={item.nameEng}
+                  alignItems='center'
+                  h='2em'
+                  _hover={{ bg: 'gray.600' }}
+                  px={{ base: 4 }} 
+                >
+                  {item.nameEng}
+                </Flex>
+              </>
             ))}
         </Box>
       </Box>
