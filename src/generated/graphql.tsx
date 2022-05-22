@@ -23,34 +23,68 @@ export type FieldError = {
 
 export type Item = {
   __typename?: 'Item';
-  cost: Scalars['Float'];
-  createdAt: Scalars['String'];
-  description: Scalars['String'];
-  id: Scalars['Float'];
-  name: Scalars['String'];
-  updatedAt: Scalars['String'];
+  created: Scalars['String'];
+  order: Order;
+  product: Product;
+  quantity: Scalars['Float'];
+  updated: Scalars['String'];
+};
+
+export type ItemResponse = {
+  __typename?: 'ItemResponse';
+  errors?: Maybe<Array<FieldError>>;
+  item?: Maybe<Item>;
 };
 
 export type Mutation = {
   __typename?: 'Mutation';
-  createItem: Item;
-  deleteItem: Scalars['Boolean'];
+  addItem?: Maybe<ItemResponse>;
+  deleteProduct: Scalars['Boolean'];
+  editItem: ItemResponse;
+  eregister: Scalars['Boolean'];
+  importProduct: Product;
   login: UserResponse;
   logout: Scalars['Boolean'];
+  newOrder: OrderResponse;
   register: UserResponse;
-  updateItem: Item;
+  removeItem: ItemResponse;
+  removeOrder: Scalars['Boolean'];
+  submitOrder: Scalars['Boolean'];
+  updateProduct: Product;
 };
 
 
-export type MutationCreateItemArgs = {
-  cost: Scalars['Int'];
-  description: Scalars['String'];
-  name: Scalars['String'];
+export type MutationAddItemArgs = {
+  productId: Scalars['Int'];
+  quantity: Scalars['Int'];
 };
 
 
-export type MutationDeleteItemArgs = {
+export type MutationDeleteProductArgs = {
   id: Scalars['Int'];
+};
+
+
+export type MutationEditItemArgs = {
+  productId: Scalars['Int'];
+  quantity: Scalars['Int'];
+};
+
+
+export type MutationEregisterArgs = {
+  id: Scalars['Int'];
+};
+
+
+export type MutationImportProductArgs = {
+  category: Scalars['String'];
+  cost: Scalars['Int'];
+  effect: Scalars['String'];
+  itemId: Scalars['Int'];
+  name: Scalars['String'];
+  nameEng: Scalars['String'];
+  sprite: Scalars['String'];
+  text: Scalars['String'];
 };
 
 
@@ -66,32 +100,95 @@ export type MutationRegisterArgs = {
 };
 
 
-export type MutationUpdateItemArgs = {
+export type MutationRemoveItemArgs = {
+  productId: Scalars['Int'];
+};
+
+
+export type MutationRemoveOrderArgs = {
+  id: Scalars['Int'];
+};
+
+
+export type MutationUpdateProductArgs = {
   cost: Scalars['Int'];
-  description: Scalars['String'];
   id: Scalars['Int'];
   name: Scalars['String'];
+};
+
+export type Order = {
+  __typename?: 'Order';
+  created: Scalars['String'];
+  id: Scalars['Float'];
+  items: Array<Item>;
+  updated: Scalars['String'];
+  user: User;
+};
+
+export type OrderResponse = {
+  __typename?: 'OrderResponse';
+  errors?: Maybe<Array<FieldError>>;
+  order?: Maybe<Order>;
+};
+
+export type Product = {
+  __typename?: 'Product';
+  category: Scalars['String'];
+  cost: Scalars['Float'];
+  created: Scalars['String'];
+  effect: Scalars['String'];
+  id: Scalars['Float'];
+  itemId: Scalars['Float'];
+  items: Item;
+  name: Scalars['String'];
+  nameEng: Scalars['String'];
+  sprite: Scalars['String'];
+  text: Scalars['String'];
+  updated: Scalars['String'];
 };
 
 export type Query = {
   __typename?: 'Query';
   conninfo?: Maybe<User>;
   hello: Scalars['String'];
-  item?: Maybe<Item>;
   items: Array<Item>;
+  order: Order;
+  orderItems: Array<Item>;
+  orders: Array<Order>;
+  product?: Maybe<Product>;
+  products: Array<Product>;
+  user: User;
   users: Array<User>;
 };
 
 
-export type QueryItemArgs = {
+export type QueryOrderArgs = {
   id: Scalars['Int'];
+};
+
+
+export type QueryOrderItemsArgs = {
+  orderId: Scalars['Int'];
+};
+
+
+export type QueryProductArgs = {
+  id: Scalars['Int'];
+};
+
+
+export type QueryUserArgs = {
+  username: Scalars['String'];
 };
 
 export type User = {
   __typename?: 'User';
-  createdAt: Scalars['String'];
+  created: Scalars['String'];
+  currentOrderId: Scalars['Float'];
   id: Scalars['Float'];
-  updatedAt: Scalars['String'];
+  isOrdering: Scalars['Boolean'];
+  orders: Array<Order>;
+  updated: Scalars['String'];
   username: Scalars['String'];
 };
 
@@ -128,6 +225,11 @@ export type ConninfoQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 export type ConninfoQuery = { __typename?: 'Query', conninfo?: { __typename?: 'User', id: number, username: string } | null };
+
+export type ProductsQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type ProductsQuery = { __typename?: 'Query', products: Array<{ __typename?: 'Product', cost: number, nameEng: string, effect: string, text: string, sprite: string, id: number }> };
 
 export const UserFieldsFragmentDoc = gql`
     fragment userFields on User {
@@ -188,4 +290,20 @@ export const ConninfoDocument = gql`
 
 export function useConninfoQuery(options?: Omit<Urql.UseQueryArgs<ConninfoQueryVariables>, 'query'>) {
   return Urql.useQuery<ConninfoQuery>({ query: ConninfoDocument, ...options });
+};
+export const ProductsDocument = gql`
+    query Products {
+  products {
+    cost
+    nameEng
+    effect
+    text
+    sprite
+    id
+  }
+}
+    `;
+
+export function useProductsQuery(options?: Omit<Urql.UseQueryArgs<ProductsQueryVariables>, 'query'>) {
+  return Urql.useQuery<ProductsQuery>({ query: ProductsDocument, ...options });
 };

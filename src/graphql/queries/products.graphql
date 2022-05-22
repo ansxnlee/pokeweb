@@ -1,0 +1,10 @@
+query Products {
+  products {
+    cost
+    nameEng
+    effect
+    text
+    sprite
+    id
+  }
+}

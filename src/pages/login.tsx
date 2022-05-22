@@ -25,6 +25,7 @@ const Login: React.FC<loginProps> = ({}) => {
           initialValues={{ username: '', password: '' }}
           onSubmit={async (values, { setErrors }) => {
             const response = await login({ username: values.username, password: values.password });
+            console.log(response);
             if (response.data?.login.errors) {
               // formik errors will display the exact errors that the server throws
               setErrors(arrayToErrorObj(response.data.login.errors));
