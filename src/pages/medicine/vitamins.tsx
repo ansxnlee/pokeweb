@@ -6,8 +6,8 @@ import { Box, Button, Flex, Image, Wrap, WrapItem } from '@chakra-ui/react'
 import Link from "next/link";
 import { useProductsQuery } from '../../generated/graphql'
 
-const trainerUtility = () => {
-  const [{ data, fetching, error }] = useProductsQuery({ variables: {category: "spelunking"} });
+const vitamins = () => {
+  const [{ data, fetching, error }] = useProductsQuery({ variables: {category: "vitamins"} });
 
   if (fetching) return <></>
   if (error) return <p>{error.message}</p>
@@ -53,4 +53,4 @@ const trainerUtility = () => {
   )
 }
 
-export default trainerUtility
+export default vitamins

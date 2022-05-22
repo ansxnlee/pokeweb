@@ -1,41 +1,56 @@
 import { Container } from '../components/Container'
 import { Header } from '../components/Header'
-import { Navbar } from '../components/Navbar'
+import { SimpleNavbar } from '../components/SimpleNavbar'
 import { Footer } from '../components/Footer'
-import { Flex, Text } from '@chakra-ui/react'
+import { Box, Button, Flex, Image, Wrap, WrapItem } from '@chakra-ui/react'
 import Link from "next/link";
+import { useProductsQuery } from '../generated/graphql'
 
-const Index = () => (
-  <Container height="100vh">
-    <Header />
-    <Navbar />
-    <Flex mx='auto' justifyContent='center' p='10'>
-      <Flex direction='column' alignItems="center" gap='2'>
-        <Text mb={4} fontSize='5xl' fontWeight='bold'>
-          Welcome to the Pokemart!
-        </Text>
-        <Text pt={4} fontSize={'2xl'} textAlign={'center'}>
-          Choose one of the categories above to start
-        </Text>
-        <Text pt={4} fontSize={'2xl'} textAlign={'center'}>
-          or use the searchbar to find what you're looking for.
-        </Text>
-        {/* chakra's text component renders <p> by default so this is a workaround */}
-        <Text pt={4} fontSize={'sm'} textAlign={'center'}>
-          Checkout my
-          {" "}
-          <Text as='span' display='inline' color='blue.400' _hover={{ color: 'orange' }}>
-            <Link href='#'>
-              github
-            </Link>
-          </Text>
-          {" "}
-          for the source code.
-        </Text>
+const Index = () => {
+  const [{ data, fetching, error }] = useProductsQuery();
+
+  if (fetching) return <></>
+  if (error) return <p>{error.message}</p>
+  return (
+    <Container height="100vh">
+      <Header />
+      <SimpleNavbar />
+      <Flex mx='auto' justifyContent='center' p='10'>
+        <Flex direction='column' alignItems="center" gap='2'>
+          <Wrap spacing='10px' justify='center'>
+            {data.products.map((item) => (
+              <WrapItem key={item.id}>
+                <Box w='180px' h='180px' borderRadius='10px'>
+                  <Flex direction='column' h='100%' justifyContent='center' alignItems='center'>
+                    <Flex h='5em' alignItems='center'>
+                      <a href='#'>
+                        <Image src={item.sprite} width='30px' height='30px' />
+                      </a>
+                    </Flex>
+                    <Box _hover={{ color: 'orange' }}>
+                      <Link href="#">
+                        {item.nameEng}
+                      </Link>
+                    </Box>
+                    <Box  _hover={{ color: 'red' }}>
+                      <span>¥</span>
+                      <a href='#'>
+                        {item.cost}
+                      </a>
+                    </Box>
+                    <Box>
+                      <Button variant='ghost' _hover={{ color: 'lightgreen' }}>Add to Cart</Button>
+                    </Box>
+                  </Flex>
+                </Box>
+              </WrapItem>
+            ))}
+          </Wrap>
+        </Flex>
       </Flex>
-    </Flex>
-    <Footer />
-  </Container>
-)
+      <Footer />
+    </Container>
+  )
+}
 
 export default Index

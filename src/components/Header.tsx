@@ -16,7 +16,12 @@ export const Header = () => (
     justifyContent="start" 
     alignItems="center" 
     gap='4' 
-    px={{ base: 4 }} 
+    px={{ base: 4 }}
+    bg='gray.50'
+    _dark={{
+      bg: 'gray.900',
+      color: 'white',
+    }}
   >
     <Box p='4'>
       <a href='/'>
