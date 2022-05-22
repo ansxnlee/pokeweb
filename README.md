@@ -1,8 +1,6 @@
 ## pokeweb
 
-Works in conjunction with the [backend](https://github.com/ansxnlee/pokemart)
-
-Frontend for pokemart, a mock E-commerce web app. 
+Frontend for pokemart, a mock E-commerce web app. (works in conjunction with the [backend](https://github.com/ansxnlee/pokemart))
 
 Built with [next.js](https://github.com/vercel/next.js) and stylized with [chakra-ui](https://github.com/chakra-ui/chakra-ui).
 
