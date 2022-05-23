@@ -24,18 +24,18 @@ const standard = () => {
                 <Box w='180px' h='180px' borderRadius='10px'>
                   <Flex direction='column' h='100%' justifyContent='center' alignItems='center'>
                     <Flex h='5em' alignItems='center'>
-                      <a href='#'>
+                      <a href={'/detail/' + item.id}>
                         <Image src={item.sprite} width='30px' height='30px' />
                       </a>
                     </Flex>
                     <Box _hover={{ color: 'orange' }}>
-                      <Link href="#">
+                      <Link href={'/detail/' + item.id}>
                         {item.nameEng}
                       </Link>
                     </Box>
                     <Box  _hover={{ color: 'red' }}>
                       <span>¥</span>
-                      <a href='#'>
+                      <a href={'/detail/' + item.id}>
                         {item.cost}
                       </a>
                     </Box>

@@ -74,13 +74,13 @@ const Cart = () => {
             {data.userOrder.order.items.map((item) => (
               <Tbody key={item.id}>
                 <Tr>
-                  <Td><Image src={item.product.sprite} /></Td>
-                  <Td>{item.product.nameEng}</Td>
+                  <Td><a href={'detail/' + item.product.id}><Image src={item.product.sprite} /></a></Td>
+                  <Td><a href={'detail/' + item.product.id}>{item.product.nameEng}</a></Td>
                   <Td>{item.product.text}</Td>
                   <Td>{item.quantity}</Td>
                   <Td>{item.product.cost * item.quantity}</Td>
                   <Td><CartEdit productId={item.product.id} /></Td>
-                  <Td><Button variant='link' onClick={() => handleDelete(item.product.id)}>Delete</Button></Td>
+                  <Td><Button variant='link' onClick={() => handleDelete(item.product.id)}>Remove</Button></Td>
                 </Tr>
               </Tbody>
             ))}

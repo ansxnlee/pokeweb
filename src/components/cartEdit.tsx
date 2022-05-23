@@ -25,7 +25,7 @@ export const CartEdit = ({ productId }) => {
   return (
     <form onSubmit={formik.handleSubmit}>
       <Flex>
-      <NumberInput size='xs'>
+      <NumberInput size='xs' min={1}>
         <NumberInputField 
           id="quantity"
           name="quantity"

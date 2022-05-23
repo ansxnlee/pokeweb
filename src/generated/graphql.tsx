@@ -261,6 +261,13 @@ export type ConninfoQueryVariables = Exact<{ [key: string]: never; }>;
 
 export type ConninfoQuery = { __typename?: 'Query', conninfo?: { __typename?: 'User', id: number, username: string } | null };
 
+export type ProductQueryVariables = Exact<{
+  productId: Scalars['Int'];
+}>;
+
+
+export type ProductQuery = { __typename?: 'Query', product?: { __typename?: 'Product', id: number, itemId: number, name: string, nameEng: string, cost: number, effect: string, text: string, sprite: string, category: string, created: string, updated: string } | null };
+
 export type ProductsQueryVariables = Exact<{
   category?: InputMaybe<Scalars['String']>;
 }>;
@@ -412,6 +419,27 @@ export const ConninfoDocument = gql`
 
 export function useConninfoQuery(options?: Omit<Urql.UseQueryArgs<ConninfoQueryVariables>, 'query'>) {
   return Urql.useQuery<ConninfoQuery>({ query: ConninfoDocument, ...options });
+};
+export const ProductDocument = gql`
+    query Product($productId: Int!) {
+  product(id: $productId) {
+    id
+    itemId
+    name
+    nameEng
+    cost
+    effect
+    text
+    sprite
+    category
+    created
+    updated
+  }
+}
+    `;
+
+export function useProductQuery(options: Omit<Urql.UseQueryArgs<ProductQueryVariables>, 'query'>) {
+  return Urql.useQuery<ProductQuery>({ query: ProductDocument, ...options });
 };
 export const ProductsDocument = gql`
     query Products($category: String) {
