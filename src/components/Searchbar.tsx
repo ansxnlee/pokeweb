@@ -1,4 +1,4 @@
-import { Button, Input, Flex, Box, useColorModeValue, useToast } from '@chakra-ui/react';
+import { Button, Input, Flex, Box } from '@chakra-ui/react';
 import { SearchIcon } from '@chakra-ui/icons';
 import { useState } from 'react';
 let jdata = require('../../public/PRODUCTS.json');
@@ -9,15 +9,12 @@ export const Searchbar = () => {
   const [value, setValue] = useState("");
   const [{ data, fetching, error}] = useProductNameQuery({ variables: {nameEng: value} });
   const router = useRouter();
-  const toast = useToast();
-  
   
   if (fetching) {
     // do nothing
   }
   if (error) return <p>{error.message}</p>
   
-
   const onChange = (e) => {
     setValue(e.target.value);
   }
@@ -30,8 +27,6 @@ export const Searchbar = () => {
   const handleClick = (searchTerm) => {
     router.push('/detail/' + data.productName.id);
   }
-
-  
 
   return (
     <>

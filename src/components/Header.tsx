@@ -39,11 +39,11 @@ export const Header = () => (
         </Button>
       </Link>
       <ConnInfo />
-      <Link href='/cart'>
+      <a href='/cart'>
         <Button colorScheme='yellow'>
           Cart
         </Button>
-      </Link>
+      </a>
     </ButtonGroup>
   </Flex>
 )

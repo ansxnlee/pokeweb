@@ -1,5 +1,6 @@
 query Conninfo {
   conninfo {
     ...userFields
+    isOrdering
   }
 }

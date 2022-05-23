@@ -2,8 +2,7 @@ import { Container } from '../components/Container'
 import { Header } from '../components/Header'
 import { SimpleNavbar } from '../components/SimpleNavbar'
 import { Footer } from '../components/Footer'
-import { Box, Button, Flex, Grid, GridItem, Image, SimpleGrid, Table, TableContainer, Tbody, Td, Th, Thead, Tr, Wrap, WrapItem } from '@chakra-ui/react'
-import Link from "next/link";
+import { Box, Button, Flex, Grid, GridItem, Image, SimpleGrid, Table, TableContainer, Tbody, Td, Th, Thead, Tr, useToast, Wrap, WrapItem } from '@chakra-ui/react'
 import { useConninfoQuery, useRemoveItemMutation, useSubmitOrderMutation, useUserOrderQuery } from '../generated/graphql'
 import { MiniHeader } from '../components/MiniHeader'
 import { MiniFooter } from '../components/MiniFooter'
@@ -24,12 +23,26 @@ const Cart = () => {
         <MiniFooter />
       </Container>
     )
+  } else if (query.data?.conninfo.isOrdering == false) {
+    // user cart is empty
+    // this case is unique from having an empty care as we are still referencing the old cart so this is a workaround
+    return (
+      <Container height="100vh">
+        <MiniHeader />
+        <Flex direction='column' justifyContent='center' alignItems='center' p='10' bg="gray.50" _dark={{ bg: 'gray.900', color: 'white'}}>
+          <Box>Hi {query.data.conninfo.username}, you currently have no items in your cart.</Box>
+        </Flex>
+        <MiniFooter />
+      </Container>
+    )
   }
 
   const [{ data, fetching, error }] = useUserOrderQuery();
   const [, removeItem] = useRemoveItemMutation();
   const [, submitOrder] = useSubmitOrderMutation();
   let greeting = null;
+  const router = useRouter();
+  const toast = useToast();
 
   if (fetching) return <></>
   if (error) return <p>{error.message}</p>
@@ -42,7 +55,20 @@ const Cart = () => {
     greeting = (
       <Flex direction='column' alignItems='center' py='2' gap='2'>
         <h1>Hi {data.userOrder.order.user.username}, these are the items currently in your cart.</h1>
-        <Button colorScheme='yellow' onClick={() => {submitOrder();}}>Submit Order</Button>
+        <Button 
+          colorScheme='yellow' 
+          onClick={() => {
+            submitOrder();
+            toast({
+              title: 'Order Submitted',
+              status: 'success',
+              duration: 4000,
+              isClosable: true,
+            })
+            // next js seems to load pages from cache instead of new server page so this is a hacky fix
+            router.push('/');
+          }}
+        >Submit Order</Button>
       </Flex>
     )
   }

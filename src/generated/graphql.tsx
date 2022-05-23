@@ -265,7 +265,7 @@ export type SubmitOrderMutation = { __typename?: 'Mutation', submitOrder: boolea
 export type ConninfoQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type ConninfoQuery = { __typename?: 'Query', conninfo?: { __typename?: 'User', id: number, username: string } | null };
+export type ConninfoQuery = { __typename?: 'Query', conninfo?: { __typename?: 'User', isOrdering: boolean, id: number, username: string } | null };
 
 export type ProductQueryVariables = Exact<{
   productId: Scalars['Int'];
@@ -426,6 +426,7 @@ export const ConninfoDocument = gql`
     query Conninfo {
   conninfo {
     ...userFields
+    isOrdering
   }
 }
     ${UserFieldsFragmentDoc}`;
