@@ -1,12 +1,16 @@
 ## pokeweb
 
-Frontend for pokemart, a mock E-commerce web app. (works in conjunction with the [backend](https://github.com/ansxnlee/pokemart))
+Frontend for [pokemart](https://github.com/ansxnlee/pokemart), an educational implementation for a mock E-commerce web app.
 
-Built with [next.js](https://github.com/vercel/next.js) and stylized with [chakra-ui](https://github.com/chakra-ui/chakra-ui).
+## Technologies used
+
+Built with [next.js](https://github.com/vercel/next.js) to handle routing.
+
+React components built and stylized with [chakra-ui](https://github.com/chakra-ui/chakra-ui).
 
 [formik](https://github.com/jaredpalmer/formik) is used so that pages that require user input are easier to manage.
 
-[urql](https://github.com/FormidableLabs/urql) is used for the graphql client with types/hooks of queries generated from [graphql-code-generator](https://github.com/dotansimha/graphql-code-generator).
+[urql](https://github.com/FormidableLabs/urql) used as the graphql client with types/hooks of queries generated from [graphql-code-generator](https://github.com/dotansimha/graphql-code-generator).
 
 ## Workflow for creating graphql queries
 
@@ -62,9 +66,13 @@ There are a total of 110 "products" in our database consisting of
 
 Pokemon and its respective properties are copyright The Pokemon Company International. Inc.
 
-## Areas for improvement
+## Improvement/Bugs
 
-- cookies don't work in incognito mode for some reason
-- find a better way to update urql graphcache/types
-- make a more responsive searchbar (currently does not disappear if not focused)
+- cookies don't work in incognito mode
+- create an "admin" page that queries everything in the database for convenience (ie. list of users, order, etc..)
+- find a better way to update urql graphcache/types in ~/pages/_app.tsx
+- some urql hooks are pretty speghetti and might crash frontend if we try to render components while fetching (race condition?)
+- if 'additem' mutations are sent too quickly, the server crashes (above problem might be related?)
 - implement an actual product filter instead of using different links with separate queries
+- having a filter will make our searchbar work differntly (better?)
+- /cart route sometimes doesn't refresh itself after 'submit order' mutation
