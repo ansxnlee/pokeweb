@@ -56,7 +56,7 @@ const Cart = () => {
   return (
     <Container height="100vh">
       <MiniHeader />
-      <Flex direction='column' mx='auto' justifyContent='center' p='10'>
+      <Flex direction='column' justifyContent='center' p='10' bg="gray.50" _dark={{ bg: 'gray.900', color: 'white'}}>
         <Box>{greeting}</Box>
         <TableContainer>
           <Table>

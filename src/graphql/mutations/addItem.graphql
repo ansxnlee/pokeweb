@@ -5,9 +5,17 @@ mutation AddItem($productId: Int!, $quantity: Int!) {
       message
     }
     item {
+      id
       quantity
       created
       updated
+      order {
+        id
+      }
+      product {
+        id
+        itemId
+      }
     }
   }
 }

@@ -2,9 +2,10 @@ import { Container } from '../../components/Container'
 import { Header } from '../../components/Header'
 import { SimpleNavbar } from '../../components/SimpleNavbar'
 import { Footer } from '../../components/Footer'
-import { Box, Button, Flex, Image, Wrap, WrapItem } from '@chakra-ui/react'
+import { Box, Flex, Image, Wrap, WrapItem } from '@chakra-ui/react'
 import Link from "next/link";
 import { useProductsQuery } from '../../generated/graphql'
+import { CartAdd } from '../../components/cartAdd'
 
 const vitamins = () => {
   const [{ data, fetching, error }] = useProductsQuery({ variables: {category: "vitamins"} });
@@ -39,7 +40,7 @@ const vitamins = () => {
                       </a>
                     </Box>
                     <Box>
-                      <Button variant='ghost' _hover={{ color: 'lightgreen' }}>Add to Cart</Button>
+                    <CartAdd productId={item.id} productName={item.nameEng} />
                     </Box>
                   </Flex>
                 </Box>

@@ -213,7 +213,7 @@ export type AddItemMutationVariables = Exact<{
 }>;
 
 
-export type AddItemMutation = { __typename?: 'Mutation', addItem?: { __typename?: 'ItemResponse', errors?: Array<{ __typename?: 'FieldError', field: string, message: string }> | null, item?: { __typename?: 'Item', quantity: number, created: string, updated: string } | null } | null };
+export type AddItemMutation = { __typename?: 'Mutation', addItem?: { __typename?: 'ItemResponse', errors?: Array<{ __typename?: 'FieldError', field: string, message: string }> | null, item?: { __typename?: 'Item', id: number, quantity: number, created: string, updated: string, order: { __typename?: 'Order', id: number }, product: { __typename?: 'Product', id: number, itemId: number } } | null } | null };
 
 export type EditItemMutationVariables = Exact<{
   quantity: Scalars['Int'];
@@ -287,9 +287,17 @@ export const AddItemDocument = gql`
       message
     }
     item {
+      id
       quantity
       created
       updated
+      order {
+        id
+      }
+      product {
+        id
+        itemId
+      }
     }
   }
 }
