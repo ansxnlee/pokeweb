@@ -14,7 +14,15 @@ React components built and stylized with [chakra-ui](https://github.com/chakra-u
 
 ## Showcase
 
-![verified](./public/md/verified.png? "index page for verified user")
+![verified](./public/md/verified.png "index page for verified user")
+
+![login](./public/md/login.png "login page")
+
+![search](./public/md/search.png "searchbar functionality")
+
+![detail](./public/md/detail.png "dynamic routes for products in database")
+
+![cart](./public/md/cart.png "checkout page")
 
 ## Workflow for creating graphql queries
 
