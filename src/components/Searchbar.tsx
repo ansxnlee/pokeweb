@@ -1,10 +1,22 @@
-import { Button, Input, Flex, Box, useColorModeValue } from '@chakra-ui/react';
+import { Button, Input, Flex, Box, useColorModeValue, useToast } from '@chakra-ui/react';
 import { SearchIcon } from '@chakra-ui/icons';
 import { useState } from 'react';
-let data = require('../../public/PRODUCTS.json');
+let jdata = require('../../public/PRODUCTS.json');
+import { useProductNameQuery } from '../generated/graphql';
+import { useRouter } from "next/router";
 
 export const Searchbar = () => {
   const [value, setValue] = useState("");
+  const [{ data, fetching, error}] = useProductNameQuery({ variables: {nameEng: value} });
+  const router = useRouter();
+  const toast = useToast();
+  
+  
+  if (fetching) {
+    // do nothing
+  }
+  if (error) return <p>{error.message}</p>
+  
 
   const onChange = (e) => {
     setValue(e.target.value);
@@ -12,8 +24,14 @@ export const Searchbar = () => {
 
   const onSearch = (searchTerm) => {
     setValue(searchTerm)
+    //console.log(data.productName.id);
   }
 
+  const handleClick = (searchTerm) => {
+    router.push('/detail/' + data.productName.id);
+  }
+
+  
 
   return (
     <>
@@ -24,16 +42,19 @@ export const Searchbar = () => {
             placeholder='Search for item..'
             value={value} 
             onChange={onChange} 
+            // hack to fix rerendering of component since im returning compoennts from the query hook
+            autoFocus  
           />
-          <Button onClick={() => onSearch(value)}>{<SearchIcon />}</Button>
+          <Button onClick={() => handleClick(value)}>{<SearchIcon />}</Button>
         </Flex>
         <Box 
           position='absolute' 
+          zIndex={9001}  // this is hacky BUT ITS OVER 9000
           bg="gray.300" 
           _dark={{ bg: 'gray.700' }} 
           width='100%'
         >
-          {data
+          {jdata
             .filter((item) => {
               const searchTerm = value.toLowerCase();
               const name = item.nameEng.toLowerCase();

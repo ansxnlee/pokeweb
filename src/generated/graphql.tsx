@@ -157,6 +157,7 @@ export type Query = {
   orderItems: Array<Item>;
   orders: Array<Order>;
   product?: Maybe<Product>;
+  productName?: Maybe<Product>;
   products: Array<Product>;
   user: User;
   userOrder: OrderResponse;
@@ -176,6 +177,11 @@ export type QueryOrderItemsArgs = {
 
 export type QueryProductArgs = {
   id: Scalars['Int'];
+};
+
+
+export type QueryProductNameArgs = {
+  nameEng: Scalars['String'];
 };
 
 
@@ -267,6 +273,13 @@ export type ProductQueryVariables = Exact<{
 
 
 export type ProductQuery = { __typename?: 'Query', product?: { __typename?: 'Product', id: number, itemId: number, name: string, nameEng: string, cost: number, effect: string, text: string, sprite: string, category: string, created: string, updated: string } | null };
+
+export type ProductNameQueryVariables = Exact<{
+  nameEng: Scalars['String'];
+}>;
+
+
+export type ProductNameQuery = { __typename?: 'Query', productName?: { __typename?: 'Product', id: number, nameEng: string } | null };
 
 export type ProductsQueryVariables = Exact<{
   category?: InputMaybe<Scalars['String']>;
@@ -440,6 +453,18 @@ export const ProductDocument = gql`
 
 export function useProductQuery(options: Omit<Urql.UseQueryArgs<ProductQueryVariables>, 'query'>) {
   return Urql.useQuery<ProductQuery>({ query: ProductDocument, ...options });
+};
+export const ProductNameDocument = gql`
+    query ProductName($nameEng: String!) {
+  productName(nameEng: $nameEng) {
+    id
+    nameEng
+  }
+}
+    `;
+
+export function useProductNameQuery(options: Omit<Urql.UseQueryArgs<ProductNameQueryVariables>, 'query'>) {
+  return Urql.useQuery<ProductNameQuery>({ query: ProductNameDocument, ...options });
 };
 export const ProductsDocument = gql`
     query Products($category: String) {

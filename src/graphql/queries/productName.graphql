@@ -1,0 +1,6 @@
+query ProductName($nameEng: String!) {
+  productName(nameEng: $nameEng) {
+    id
+    nameEng
+  }
+}
