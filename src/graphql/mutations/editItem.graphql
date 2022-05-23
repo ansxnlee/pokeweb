@@ -1,0 +1,19 @@
+mutation EditItem($quantity: Int!, $productId: Int!) {
+  editItem(quantity: $quantity, productId: $productId) {
+    errors {
+      field
+      message
+    }
+    item {
+      quantity
+      created
+      updated
+      order {
+        id
+      }
+      product {
+        id
+      }
+    }
+  }
+}

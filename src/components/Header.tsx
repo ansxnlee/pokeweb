@@ -38,8 +38,12 @@ export const Header = () => (
           Register
         </Button>
       </Link>
-        <ConnInfo />
-      <Button colorScheme='yellow'>Cart</Button>
+      <ConnInfo />
+      <Link href='/cart'>
+        <Button colorScheme='yellow'>
+          Cart
+        </Button>
+      </Link>
     </ButtonGroup>
   </Flex>
 )

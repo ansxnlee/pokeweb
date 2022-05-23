@@ -1,0 +1,35 @@
+query UserOrder {
+  userOrder {
+    errors {
+      field
+      message
+    }
+    order {
+      id
+      created
+      updated
+      user {
+        id
+        username
+      }
+      items {
+        id
+        quantity
+        created
+        updated
+        product {
+          id
+          itemId
+          name
+          nameEng
+          cost
+          text
+          sprite
+          category
+          created
+          updated
+        }
+      }
+    }
+  }
+}

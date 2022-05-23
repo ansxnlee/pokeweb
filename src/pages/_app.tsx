@@ -17,6 +17,12 @@ const client = createClient({
   exchanges: [
     dedupExchange, 
     cacheExchange({
+      // these entities don't have keys of their own so they'll "inherit" the keys from their children ids 
+      keys: {
+        Item: () => null,
+        FieldError: () => null,
+        OrderResponse: () => null,
+      },
       updates: {
         Mutation: {
           login: (_result, args, cache, info) => {

@@ -24,6 +24,7 @@ export type FieldError = {
 export type Item = {
   __typename?: 'Item';
   created: Scalars['String'];
+  id: Scalars['Float'];
   order: Order;
   product: Product;
   quantity: Scalars['Float'];
@@ -158,6 +159,7 @@ export type Query = {
   product?: Maybe<Product>;
   products: Array<Product>;
   user: User;
+  userOrder: OrderResponse;
   users: Array<User>;
 };
 
@@ -205,6 +207,22 @@ export type UserResponse = {
 
 export type UserFieldsFragment = { __typename?: 'User', id: number, username: string };
 
+export type AddItemMutationVariables = Exact<{
+  productId: Scalars['Int'];
+  quantity: Scalars['Int'];
+}>;
+
+
+export type AddItemMutation = { __typename?: 'Mutation', addItem?: { __typename?: 'ItemResponse', errors?: Array<{ __typename?: 'FieldError', field: string, message: string }> | null, item?: { __typename?: 'Item', quantity: number, created: string, updated: string } | null } | null };
+
+export type EditItemMutationVariables = Exact<{
+  quantity: Scalars['Int'];
+  productId: Scalars['Int'];
+}>;
+
+
+export type EditItemMutation = { __typename?: 'Mutation', editItem: { __typename?: 'ItemResponse', errors?: Array<{ __typename?: 'FieldError', field: string, message: string }> | null, item?: { __typename?: 'Item', quantity: number, created: string, updated: string, order: { __typename?: 'Order', id: number }, product: { __typename?: 'Product', id: number } } | null } };
+
 export type LoginMutationVariables = Exact<{
   password: Scalars['String'];
   username: Scalars['String'];
@@ -226,6 +244,18 @@ export type RegisterMutationVariables = Exact<{
 
 export type RegisterMutation = { __typename?: 'Mutation', register: { __typename?: 'UserResponse', errors?: Array<{ __typename?: 'FieldError', field: string, message: string }> | null, user?: { __typename?: 'User', id: number, username: string } | null } };
 
+export type RemoveItemMutationVariables = Exact<{
+  productId: Scalars['Int'];
+}>;
+
+
+export type RemoveItemMutation = { __typename?: 'Mutation', removeItem: { __typename?: 'ItemResponse', errors?: Array<{ __typename?: 'FieldError', field: string, message: string }> | null, item?: { __typename?: 'Item', quantity: number, created: string, updated: string } | null } };
+
+export type SubmitOrderMutationVariables = Exact<{ [key: string]: never; }>;
+
+
+export type SubmitOrderMutation = { __typename?: 'Mutation', submitOrder: boolean };
+
 export type ConninfoQueryVariables = Exact<{ [key: string]: never; }>;
 
 
@@ -238,12 +268,61 @@ export type ProductsQueryVariables = Exact<{
 
 export type ProductsQuery = { __typename?: 'Query', products: Array<{ __typename?: 'Product', cost: number, nameEng: string, effect: string, text: string, sprite: string, id: number }> };
 
+export type UserOrderQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type UserOrderQuery = { __typename?: 'Query', userOrder: { __typename?: 'OrderResponse', errors?: Array<{ __typename?: 'FieldError', field: string, message: string }> | null, order?: { __typename?: 'Order', id: number, created: string, updated: string, user: { __typename?: 'User', id: number, username: string }, items: Array<{ __typename?: 'Item', id: number, quantity: number, created: string, updated: string, product: { __typename?: 'Product', id: number, itemId: number, name: string, nameEng: string, cost: number, text: string, sprite: string, category: string, created: string, updated: string } }> } | null } };
+
 export const UserFieldsFragmentDoc = gql`
     fragment userFields on User {
   id
   username
 }
     `;
+export const AddItemDocument = gql`
+    mutation AddItem($productId: Int!, $quantity: Int!) {
+  addItem(productId: $productId, quantity: $quantity) {
+    errors {
+      field
+      message
+    }
+    item {
+      quantity
+      created
+      updated
+    }
+  }
+}
+    `;
+
+export function useAddItemMutation() {
+  return Urql.useMutation<AddItemMutation, AddItemMutationVariables>(AddItemDocument);
+};
+export const EditItemDocument = gql`
+    mutation EditItem($quantity: Int!, $productId: Int!) {
+  editItem(quantity: $quantity, productId: $productId) {
+    errors {
+      field
+      message
+    }
+    item {
+      quantity
+      created
+      updated
+      order {
+        id
+      }
+      product {
+        id
+      }
+    }
+  }
+}
+    `;
+
+export function useEditItemMutation() {
+  return Urql.useMutation<EditItemMutation, EditItemMutationVariables>(EditItemDocument);
+};
 export const LoginDocument = gql`
     mutation Login($password: String!, $username: String!) {
   login(password: $password, username: $username) {
@@ -287,6 +366,34 @@ export const RegisterDocument = gql`
 export function useRegisterMutation() {
   return Urql.useMutation<RegisterMutation, RegisterMutationVariables>(RegisterDocument);
 };
+export const RemoveItemDocument = gql`
+    mutation RemoveItem($productId: Int!) {
+  removeItem(productId: $productId) {
+    errors {
+      field
+      message
+    }
+    item {
+      quantity
+      created
+      updated
+    }
+  }
+}
+    `;
+
+export function useRemoveItemMutation() {
+  return Urql.useMutation<RemoveItemMutation, RemoveItemMutationVariables>(RemoveItemDocument);
+};
+export const SubmitOrderDocument = gql`
+    mutation submitOrder {
+  submitOrder
+}
+    `;
+
+export function useSubmitOrderMutation() {
+  return Urql.useMutation<SubmitOrderMutation, SubmitOrderMutationVariables>(SubmitOrderDocument);
+};
 export const ConninfoDocument = gql`
     query Conninfo {
   conninfo {
@@ -313,4 +420,45 @@ export const ProductsDocument = gql`
 
 export function useProductsQuery(options?: Omit<Urql.UseQueryArgs<ProductsQueryVariables>, 'query'>) {
   return Urql.useQuery<ProductsQuery>({ query: ProductsDocument, ...options });
+};
+export const UserOrderDocument = gql`
+    query UserOrder {
+  userOrder {
+    errors {
+      field
+      message
+    }
+    order {
+      id
+      created
+      updated
+      user {
+        id
+        username
+      }
+      items {
+        id
+        quantity
+        created
+        updated
+        product {
+          id
+          itemId
+          name
+          nameEng
+          cost
+          text
+          sprite
+          category
+          created
+          updated
+        }
+      }
+    }
+  }
+}
+    `;
+
+export function useUserOrderQuery(options?: Omit<Urql.UseQueryArgs<UserOrderQueryVariables>, 'query'>) {
+  return Urql.useQuery<UserOrderQuery>({ query: UserOrderDocument, ...options });
 };

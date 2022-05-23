@@ -1,0 +1,13 @@
+mutation RemoveItem($productId: Int!) {
+  removeItem(productId: $productId) {
+    errors {
+      field
+      message
+    }
+    item {
+      quantity
+      created
+      updated
+    }
+  }
+}

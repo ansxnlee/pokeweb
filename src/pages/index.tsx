@@ -15,7 +15,7 @@ const Index = () => {
     <Container height="100vh">
       <Header />
       <SimpleNavbar />
-      <Flex mx='auto' justifyContent='center' p='10'>
+      <Flex mx='auto' justifyContent='center' p='10' bg="gray.50" _dark={{ bg: 'gray.900', color: 'white'}}>
         <Flex direction='column' alignItems="center" gap='2'>
           <Wrap spacing='10px' justify='center'>
             {data.products.map((item) => (
