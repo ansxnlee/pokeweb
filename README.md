@@ -14,7 +14,7 @@ React components built and stylized with [chakra-ui](https://github.com/chakra-u
 
 ## Showcase
 
-![verified](../public/md/verified.png)
+![verified](../public/md/verified.png?raw=true)
 
 ## Workflow for creating graphql queries
 
