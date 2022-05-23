@@ -12,6 +12,10 @@ React components built and stylized with [chakra-ui](https://github.com/chakra-u
 
 [urql](https://github.com/FormidableLabs/urql) used as the graphql client with types/hooks of queries generated from [graphql-code-generator](https://github.com/dotansimha/graphql-code-generator).
 
+## Showcase
+
+![verified](../public/md/verified.png)
+
 ## Workflow for creating graphql queries
 
 1. Test queries in apollo sandbox
