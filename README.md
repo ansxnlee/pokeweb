@@ -36,38 +36,6 @@ yarn gen
 
 4. Hooks within generated tsx file can now be used.
 
-## Importing PRODUCTS.json into postgres
-
-There's probably a better way to do this but this works fine I guess.
-
-1. Copy json file into /tmp folder since /home might have restricted access with psql
-2. Set psql variable name to json data (we can echo to double check the value)
-
-```sql
-\set $var `cat /tmp/PRODUCTS.json`
-\echo :$var
-```
-
-3. Create a temp table that holds our entire json array in a single row
-
-```sql
-CREATE temp TABLE $tableName ( $colName jsonb );
-INSERT INTO $tableName VALUES (:'$var');
-```
-
-4. Split json array into table with proper columns for ease of use
-```sql
-CREATE temp TABLE t1 AS 
-select * from jsonb_to_recordset((select * from t)) 
-AS x(cost int, name text, text text, effect text, "itemId" int, sprite text, "nameEng" text, category text);
-```
-
-5. Copy our table from step 4 directly into the "product" table
-```sql
-INSERT INTO product (item_id, name, name_eng, cost, effect, text, sprite, category, created, updated) 
-SELECT "itemId", name, "nameEng", cost, effect, text, sprite, category, CURRENT_DATE, CURRENT_DATE FROM t1;
-```
-
 ## Product Categories
 
 There are a total of 110 "products" in our database consisting of
